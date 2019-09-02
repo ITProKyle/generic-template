@@ -1,0 +1,11 @@
+name: Tests run on every push
+
+on: push
+
+jobs:
+  secret-scan:
+    name: Secrets Scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: max/secret-scan@master
