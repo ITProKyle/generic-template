@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: max/secret-scan@v1.0.0
+      - uses: max/secret-scan@master
   python-linting:
     name: Python Linting
     runs-on: ubuntu-latest
