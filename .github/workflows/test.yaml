@@ -1,0 +1,21 @@
+name: Tests run on every push
+
+on: push
+
+jobs:
+  secret-scan:
+    name: Secrets Scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: max/secret-scan@v1.0.0
+  python-linting:
+    name: Python Linting
+    runs-on: ubuntu-latest
+    steps:
+      - name: flake8
+        uses: cclauss/GitHub-Action-for-Flake8@0.1.2
+        args: flake8 .
+      - name: pylint
+        uses: cclauss/GitHub-Action-for-pylint@0.6.1
+        args: pipenv sync -d ; pylint **/*.py
