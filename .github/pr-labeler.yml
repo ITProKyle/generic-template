@@ -1,4 +1,3 @@
-feature: ['feature/*', 'feat/*']
-bugfix: ['fix/*', 'bugfix/*']
-hotfix: 'hotfix/*'
-chore: chore/*
+type:feature: ['feature/*', 'feat/*', 'enhancement/*']
+type:bug: ['fix/*', 'bugfix/*', 'hotfix/*']
+type:maintenance: ['chore/*', 'maintenance/*', 'maintain/*', 'maint/*']
