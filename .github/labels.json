@@ -68,27 +68,27 @@
     "color": "#e11d21"
   },
   {
-    "name": "type:bug",
+    "name": "bug",
     "color": "#d73a4a"
   },
   {
-    "name": "type:documentation",
+    "name": "documentation",
     "color": "#0075ca"
   },
   {
-    "name": "type:duplicate",
+    "name": "duplicate",
     "color": "#cfd3d7"
   },
   {
-    "name": "type:feature",
+    "name": "feature",
     "color": "#84b6eb"
   },
   {
-    "name": "type:maintenance",
+    "name": "maintenance",
     "color": "#fbca04"
   },
   {
-    "name": "type:question",
+    "name": "question",
     "color": "#cc317c"
   },
   {

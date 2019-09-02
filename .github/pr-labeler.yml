@@ -1,3 +1,13 @@
-'type:feature': ['feature/*', 'feat/*', 'enhancement/*']
-'type:bug': ['fix/*', 'bugfix/*', 'hotfix/*']
-'type:maintenance': ['chore/*', 'maintenance/*', 'maintain/*', 'maint/*']
+feature:
+  - 'feature/*'
+  - 'feat/*'
+  - 'enhancement/*'
+bug:
+  - 'fix/*'
+  - 'bugfix/*'
+  - 'hotfix/*'
+maintenance:
+  - 'chore/*'
+  - 'maintenance/*'
+  - 'maintain/*'
+  - 'maint/*'
