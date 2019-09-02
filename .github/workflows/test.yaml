@@ -9,11 +9,3 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: max/secret-scan@master
-  python-linting:
-    name: Python Linting
-    runs-on: ubuntu-latest
-    steps:
-      - name: flake8
-        uses: cclauss/GitHub-Action-for-Flake8@0.1.2
-        with:
-          args: flake8 .
