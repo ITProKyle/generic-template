@@ -33,7 +33,7 @@
         "!RefAll",
         "!Condition"
     ],
-    "cSpell.userWords": [
+    "cSpell.words": [
         "cidrs",
         "DHCP",
         "ENIs",
@@ -46,6 +46,7 @@
         "popen",
         "prepend",
         "repo",
+        "repos",
         "resync",
         "unassign",
         "unassociated",
