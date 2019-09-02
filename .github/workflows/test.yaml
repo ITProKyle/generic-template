@@ -9,3 +9,32 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: max/secret-scan@master
+  python:
+    name: Python tests
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 4
+      matrix:
+        python-version: [3.6, 3.7]
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v1
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pipenv
+          pipenv sync --dev
+      - name: Lint with mypy
+        run: |
+          find ${GITHUB_WORKSPACE} -name '*.py' ! -name '*_types.py' -exec pipenv run mypy {} +
+      - name: Lint with flake8
+        run: |
+          pipenv run flake8 --exclude=tests ${GITHUB_WORKSPACE} --count --show-source --statistics
+      - name: Lint with pylint
+        run: |
+          find ${GITHUB_WORKSPACE} -name '*.py' | xargs pipenv run pylint --rcfile=.pylintrc
+      - name: Test with pytest
+        run: pipenv run pytest
