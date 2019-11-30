@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-runway = "~= 0.47"
+runway = "~= 1.2"
 typing = {version = "~= 3.7",markers = "python_version < '3.5'"}
 
 [dev-packages]
@@ -15,5 +15,5 @@ mypy = "~= 0.610"
 pylint = "~= 2.0"
 # python3 flake8-docstrings fails with pydocstyle 4:
 # https://github.com/PyCQA/pydocstyle/issues/375
-pydocstyle = '<4.0.0'
+pydocstyle = '< 4.0.0'
 pytest = '~= 5.1'

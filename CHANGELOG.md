@@ -7,10 +7,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.3.0] - 2019-11-30
+
 ### Changed
 
 - moved pipenv virtual environment into the project with the `make sync` command and exportable `.env` file
 - `.env` is not tracked in the repo
+- updated runway pin to `~=1.2`
+- ran `pipenv update --dev` to update all packages
 
 ### Fixed
 
