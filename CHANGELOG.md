@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
+- moved pipenv virtual environment into the project with the `make sync` command and exportable `.env` file
+- `.env` is not tracked in the repo
+
 ### Fixed
 
 - Makefile directives
