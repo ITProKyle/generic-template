@@ -5,11 +5,11 @@ deploy: sync
 	DEPLOY_ENVIRONMENT=$(filter-out $@, $(MAKECMDGOALS)) \
 	pipenv run runway deploy
 
-deploy: sync
+destroy: sync
 	DEPLOY_ENVIRONMENT=$(filter-out $@, $(MAKECMDGOALS)) \
 	pipenv run runway destroy
 
-deploy: sync
+plan: sync
 	DEPLOY_ENVIRONMENT=$(filter-out $@, $(MAKECMDGOALS)) \
 	pipenv run runway plan
 
