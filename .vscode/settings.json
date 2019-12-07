@@ -5,6 +5,7 @@
     "editor.insertSpaces": true,
     "files.insertFinalNewline": true,
     "[python]": {
+        "editor.rulers": [79, 100, 120],
         "editor.tabSize": 4
     },
     "python.linting.flake8Enabled": true,
@@ -104,6 +105,7 @@
         "isupper",
         "jquery",
         "keypair",
+        "kwarg",
         "labelmaker",
         "lifecycle",
         "loadtest",
@@ -138,6 +140,7 @@
         "preuninstall",
         "provisioners",
         "pydocstyle",
+        "pygments",
         "pyhcl",
         "pyinstaller",
         "pylint",
@@ -212,5 +215,9 @@
         "yubico",
         "yubikey",
         "zgitignore"
+    ],
+    "restructuredtext.confPath": "${workspaceFolder}/docs/source",
+    "restructuredtext.linter.extraArgs": [
+        "--ignore D001"
     ]
 }
