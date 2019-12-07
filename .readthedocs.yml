@@ -17,5 +17,7 @@ python:
   version: 3.7
   install:
     - requirements: docs/requirements.txt
-    - method: setuptools
-      path: ./
+    # Uncomment and modify the package name to use autodocs or dynamically get
+    # the package version
+    # - method: setuptools
+    #   path: ./
