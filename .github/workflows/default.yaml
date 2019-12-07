@@ -1,4 +1,4 @@
-name: Tests run on every push
+name: Test => Build => Deploy
 
 on: push
 
@@ -29,12 +29,12 @@ jobs:
           pipenv sync --dev
       - name: Lint with mypy
         run: |
-          find ${GITHUB_WORKSPACE} -name '*.py' ! -name '*_types.py' -exec pipenv run mypy {} +
+          find ${GITHUB_WORKSPACE}/src -name '*.py' ! -name '*_types.py' -exec pipenv run mypy {} +
       - name: Lint with flake8
         run: |
-          pipenv run flake8 --exclude=tests ${GITHUB_WORKSPACE} --count --show-source --statistics
+          pipenv run flake8 ${GITHUB_WORKSPACE}/src --count --show-source --statistics
       - name: Lint with pylint
         run: |
-          find ${GITHUB_WORKSPACE} -name '*.py' | xargs pipenv run pylint --rcfile=.pylintrc
+          find ${GITHUB_WORKSPACE}/src -name '*.py' | xargs pipenv run pylint --rcfile=.pylintrc
       - name: Test with pytest
         run: pipenv run pytest
