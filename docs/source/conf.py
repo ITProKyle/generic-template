@@ -9,6 +9,7 @@ full list see the documentation: http://www.sphinx-doc.org/en/master/config
 
 """
 import os
+from shutil import copyfile
 import sys
 
 # add to path for imports
@@ -18,6 +19,8 @@ from pygment_styles import OneDark, pygments_patch_style  # noqa
 
 
 pygments_patch_style("one_dark", OneDark)
+
+copyfile('../../CHANGELOG.md', './changelog.md')
 
 # -- Path setup --------------------------------------------------------------
 

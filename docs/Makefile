@@ -17,5 +17,4 @@ help:
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
 %: Makefile
 	@rm -rf $(BUILDDIR) && \
-	yes | cp ../CHANGELOG.md ./source/changelog.md && \
 	$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
