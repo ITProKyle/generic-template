@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.4.0] - 2019-12-7
+
+### Added
+
+- [ReadTheDocs](https://readthedocs.org) starter
+  - custom _"dark mode"_ css
+  - custom "One Dark" syntax highlighting
+
+### Changed
+
+- `test.yaml` workflow is now `default.yaml`
+  - workflow was also renamed to `Test => Build => Deploy`
+- python tests now only run in the `src/` directory instead of the entire repo
+
 ## [0.3.0] - 2019-11-30
 
 ### Changed
