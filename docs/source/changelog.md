@@ -7,19 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [0.4.1] - 2019-12-08
-
-### Changed
-
-- color of nav arrows in the docs to be more appropriate for a "dark mode" theme
-- color of links will be the same whether they have been visited or not
-- markdown lint error `MD024 no-duplicate-heading/no-duplicate-header` is ignored
-
-### Fixed
-
-- doc nav bar color on mobile
-
-## [0.4.0] - 2019-12-07
+## [0.4.0] - 2019-12-7
 
 ### Added
 
