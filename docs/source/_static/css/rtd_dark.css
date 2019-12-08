@@ -1,5 +1,5 @@
-a:visited {
-	color: #bf84d8;
+a, a:visited {
+	color: #C776DF !important;
 }
 
 blockquote {
@@ -26,28 +26,25 @@ code.docutils {
 	color: grey !important;
 }
 
-.wy-nav-content-wrap {
+.wy-nav-content-wrap, .wy-nav-side, .wy-nav-top {
 	background-color: #181a1f !important;
 }
 
-.wy-nav-side {
+.btn-neutral, .fa-arrow-circle-right, .fa-arrow-circle-left {
+	color: aliceblue !important;
 	background-color: #181a1f !important;
 }
 
-.sidebar {
-	background-color: #21252b !important;
+.btn-neutral:visited {
+    color: aliceblue !important;
 }
 
-.sidebar-title {
+.admonition, .note, .sidebar-title {
 	background-color: #21252b !important;
 }
 
 .xref, .py-meth {
 	color: #7ec3e6 !important;
-}
-
-.admonition, .note {
-	background-color: #21252b !important;
 }
 
 .wy-side-nav-search {
