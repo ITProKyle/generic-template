@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- added `.editorconfig` config file
+
+### Removed
+
+- removed `pr-labeler` workflow as it does not work for PRs coming from forks
+
 ## [0.4.1] - 2019-12-08
 
 ### Changed
