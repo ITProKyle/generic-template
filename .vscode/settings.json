@@ -89,6 +89,7 @@
         "docutils",
         "dotnetcore",
         "dynamodb",
+        "editorconfig",
         "elasticache",
         "elasticloadbalancingv",
         "elbv",
