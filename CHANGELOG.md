@@ -9,11 +9,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
-- `.editorconfig`
+- added `.editorconfig` config file
 
 ### Removed
 
-- `pr-labeler` workflow
+- removed `pr-labeler` workflow as it does not work for PRs coming from forks
 
 ## [0.4.1] - 2019-12-08
 
