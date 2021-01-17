@@ -3,12 +3,6 @@ name: Test => Build => Deploy
 on: push
 
 jobs:
-  secret-scan:
-    name: Secrets Scan
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: max/secret-scan@master
   python:
     name: Python tests
     runs-on: ubuntu-latest
