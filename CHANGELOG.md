@@ -11,9 +11,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - added `.editorconfig` config file
 
+### Changed
+
+- updated `actions/checkout` to v2
+- updated `actions/setup-python` to v2
+- updated `toolmantim/release-drafter` to v5.13.0 & add more sections to conf
+- changed python 3.6 to python 3.8
+
 ### Removed
 
 - removed `pr-labeler` workflow as it does not work for PRs coming from forks
+- removed use of `max/secret-scan`
 
 ## [0.4.1] - 2019-12-08
 
