@@ -8,7 +8,7 @@ A generic template for GitHub repos.
 
 | Command               | Description                            |
 |-----------------------|----------------------------------------|
-| `make sync`           | Sync python environment with pipfile   |
+| `make <cmd>`          | does something                         |
 
 ## Setup
 
@@ -26,4 +26,4 @@ This section outlines how to setup portions of the repo that cannot be reasonabl
 ### Development Environment
 
 1. `export $(cat .env | xargs)` to setup environment variables.
-2. `make sync` or `pipenv sync --dev --three` after completing **Step 1**.
+2. `poetry install` after completing **Step 1**.
