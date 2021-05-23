@@ -1,0 +1,28 @@
+# cspell:ignore deepakputhraya dependabot
+name: PR
+
+
+on:
+  pull_request:
+
+
+jobs:
+  enforce-branch-name:
+    name: Enforce Branch Name
+    runs-on: ubuntu-latest
+    steps:
+      - uses: deepakputhraya/action-branch-name@v1.0.0
+        with:
+          regex: ([a-z])+\/([a-zA-Z0-9\-\_])+
+          allowed_prefixes: bugfix,chore,dependabot,docs,feat,feature,fix,hotfix,maint,maintain,maintenance,release
+          ignore: master,release,develop
+  label-pr:
+    name: Label PR
+    # skip running the job from forks
+    # uncomment and replace with the name of the repo
+    # if: github.repository == 'ITProKyle/generic-template'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: release-drafter/release-drafter@v5.15.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

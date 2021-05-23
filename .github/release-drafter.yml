@@ -1,25 +1,76 @@
-name-template: 'v$NEXT_PATCH_VERSION'
-tag-template: 'v$NEXT_PATCH_VERSION'
+# https://github.com/release-drafter/release-drafter
+autolabeler:  # cspell:ignore autolabeler
+  - label: bug
+    branch: [/^(bug|bugfix|fix|hotfix)\/.*/]
+  - label: cloudformation
+    files:
+      - '**/templates/*.json'
+      - '**/templates/*.template'
+      - '**/templates/*.yaml'
+      - '**/templates/*.yml'
+  - label: dependencies
+    branch: [/^(depend|dependabot)\/.*/]
+  - label: documentation
+    branch: [/^(docs)\/.*/]
+  - label: feature
+    branch: [/^(feat|feature)\/.*/]
+  - label: maintenance
+    branch: [/^(chore|maint|maintain|maintenance)\/.*/]
+  - label: patch
+    branch: [/^(bug|bugfix|fix|hotfix)\/.*/]
+  - label: poetry
+    files:
+      - poetry.lock
+      - poetry.toml
+  - label: python
+    files:
+      - '**/*.py'
+      - poetry.lock
+      - pyproject.toml
+      - setup.cfg
+  - label: release
+    branch: [/^(release)\/.*/]
+  - label: workflows
+    files:
+      - .github/workflows/*.yml
 categories:
-  - title: '🚀 Features'
+  - title: 🚀 Features
     labels:
-      - 'feature'
-  - title: '🐛 Bug Fixes'
+      - feature
+      - enhancement
+  - title: 🐛 Bug Fixes
     labels:
-      - 'bug'
-  - title: '🧶 Dependencies'
+      - bug
+  - title: 🧶 Dependencies
     labels:
       - dependencies
-  - title: '📖 Doc Updates'
+  - title: 📖 Doc Updates
     labels:
       - documentation
-  - title: '🧰 Maintenance'
-    label: 'maintenance'
-exclude-labels:
-  - 'skip-changelog'
-  - 'documentation'
+  - title: 🧰 Maintenance
+    label: maintenance
+category-template: >-
+  ### $TITLE
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
+commitish: master  # cspell:ignore commitish
+exclude-labels:
+  - skip-changelog
+  - release
+name-template: v$RESOLVED_VERSION
+sort-direction: ascending
+tag-template: v$RESOLVED_VERSION
 template: |
-  ## Changes
+  ## What Changed
 
   $CHANGES
+version-resolver:
+  major:
+    labels:
+      - major
+  minor:
+    labels:
+      - minor
+  patch:
+    labels:
+      - patch
+  default: patch
