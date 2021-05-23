@@ -1,18 +1,30 @@
 {
-    "autoDocstring.docstringFormat": "google",
-    "editor.rulers": [79, 100, 120],
-    "editor.tabSize": 2,
-    "editor.insertSpaces": true,
-    "files.insertFinalNewline": true,
     "[python]": {
-        "editor.rulers": [79, 100, 120],
+        "editor.rulers": [
+            79,
+            100,
+            120
+        ],
         "editor.tabSize": 4
     },
+    "autoDocstring.docstringFormat": "google",
+    "editor.insertSpaces": true,
+    "editor.rulers": [
+        79,
+        100,
+        120
+    ],
+    "editor.tabSize": 2,
+    "files.insertFinalNewline": true,
+    "python.formatting.provider": "autopep8",
     "python.linting.flake8Enabled": true,
     "python.linting.mypyEnabled": true,
     "python.linting.pylintEnabled": true,
     "python.pythonPath": ".venv/bin/python",
-    "python.formatting.provider": "autopep8",
+    "restructuredtext.confPath": "${workspaceFolder}/docs/source",
+    "restructuredtext.linter.extraArgs": [
+        "--ignore D001"
+    ],
     "yaml.customTags": [
         "!Equals sequence",
         "!FindInMap sequence",
@@ -33,9 +45,5 @@
         "!ValueOfAll sequence",
         "!RefAll",
         "!Condition"
-    ],
-    "restructuredtext.confPath": "${workspaceFolder}/docs/source",
-    "restructuredtext.linter.extraArgs": [
-        "--ignore D001"
     ]
 }

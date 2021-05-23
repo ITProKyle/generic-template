@@ -1,9 +1,9 @@
 {
-  "name": "generic-template",
-  "version": "0.0.0",
   "description": "Version management for npm tools.",
   "devDependencies": {
     "@cspell/dict-python": "^1.0.35",
     "cspell": "^5.4.1"
-  }
+  },
+  "name": "generic-template",
+  "version": "0.0.0"
 }

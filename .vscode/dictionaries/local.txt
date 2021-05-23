@@ -8,5 +8,6 @@ noqa
 printf
 repos
 subclassing
+venv
 virtualenvs
 xargs
