@@ -10,15 +10,20 @@ python = "^3.8"
 
 [tool.poetry.dev-dependencies]
 black = "21.5b1"
+coverage = "^5.5"
 flake8 = "^3.9.2"
 flake8-docstrings = "^1.6.0"
 isort = "^5.8.0"
+mock = "^4.0.3"
 mypy = "^0.790"
+nitpick = "^0.26.0"
 pep8-naming = "^0.11.1"
-pre-commit = "^2.13.0"
-pydocstyle = "^6.1.1"
-pylint = "^2.8.2"
-pytest = "^6.2.4"
+pre-commit = "^2.10.1"
+pydocstyle = "^5.1.1"
+pylint = "^2.7.1"
+pytest = "^6.2.2"
+pytest-cov = "^2.11.1"
+pytest-mock = "^3.5.1"
 recommonmark = "^0.6"
 
 [build-system]
@@ -47,12 +52,75 @@ target-version = ["py38", "py39"]
 [tool.isort]
 profile = "black"
 skip = [
-    ".eggs",
-    ".git",
-    ".mypy_cache",
-    ".venv",
-    "_build",
-    "build",
-    "dist",
-    "node_modules",
+  ".eggs",
+  ".git",
+  ".runway",
+  ".serverless",
+  ".venv",
+  "_build",
+  "build",
+  "dist",
+  "node_modules",
 ]
+
+
+[tool.nitpick]
+style = [
+  "https://raw.githubusercontent.com/ITProKyle/nitpick-styles/master/styles/editorconfig.toml",
+  "https://raw.githubusercontent.com/ITProKyle/nitpick-styles/master/styles/flake8/default.toml",
+  "https://raw.githubusercontent.com/ITProKyle/nitpick-styles/master/styles/nitpick-base.toml",
+  "https://raw.githubusercontent.com/ITProKyle/nitpick-styles/master/styles/pylint/default.toml",
+]
+cache = "never"
+
+
+[tool.pylint.basic]
+good-names = [ "_", "a", "b", "ca", "ci", "db", "f", "fn", "i", "id", "j", "k", "ok", "s3", "ui", "up", "v",]
+
+[tool.pylint.classes]
+defining-attr-methods = [ "__init__", "__new__",]
+
+[tool.pylint.design]
+max-args = 50
+max-attributes = 50
+max-bool-expr = 5
+max-branches = 20
+max-locals = 25
+max-parents = 10
+max-public-methods = 30
+max-returns = 6
+max-statements = 50
+min-public-methods = 0
+
+[tool.pylint.format]
+max-line-length = 100
+max-module-lines = 1000
+
+[tool.pylint.imports]
+allow-wildcard-with-all = "no"
+
+[tool.pylint.logging]
+logging-format-style = "old"
+
+[tool.pylint.master]
+jobs = 0
+
+[tool.pylint.message_control]
+disable = [
+  "line-too-long",
+  "missing-class-docstring",
+  "missing-function-docstring",
+  "missing-module-docstring",
+  "similarities",
+  "ungrouped-imports",
+]
+
+[tool.pylint.miscellaneous]
+notes = [
+  "FIXME",
+]
+
+[tool.pylint.reports]
+msg-template = "{path}:{line}:{column}: {msg_id}: {msg} ({symbol})"
+output-format = "colorized"
+score = "yes"
