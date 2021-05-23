@@ -1,7 +1,6 @@
 """Import classes."""
-from typing import Callable
-
 import sys
+from typing import Callable
 
 import pygments.styles
 
@@ -16,4 +15,5 @@ def pygments_patch_style(mod_name: str, cls: Callable) -> None:
     setattr(pygments.styles, mod_name, mod)
     sys.modules["pygments.styles." + mod_name] = mod
     from pygments.styles import STYLE_MAP
+
     STYLE_MAP[mod_name] = mod_name + "::" + cls_name
