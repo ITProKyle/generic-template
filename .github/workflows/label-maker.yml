@@ -1,0 +1,27 @@
+# Manage the labels of a GitHub repository as code.
+name: Label Maker
+
+
+on:
+  push:
+    paths:
+      - .github/workflows/label-maker.yml
+      - .github/labels.yml
+
+
+jobs:
+  label-maker:
+    # skip running the job from forks
+    # uncomment and replace with the name of the repo
+    # if: github.repository == 'ITProKyle/generic-template'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Run Label Maker
+        uses: crazy-max/ghaction-github-labeler@v3  # cspell:ignore ghaction
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          yaml-file: .github/labels.yml
+          skip-delete: false
+          dry-run: ${{ github.ref != 'refs/heads/master' }}
