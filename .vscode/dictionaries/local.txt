@@ -1,0 +1,12 @@
+bdist
+docstrings
+fgrep
+howto
+kwarg
+labelmaker
+noqa
+printf
+repos
+subclassing
+virtualenvs
+xargs

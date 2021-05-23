@@ -20,6 +20,12 @@ lint: ## run linters
 	@echo "Success!"
 
 setup: setup-poetry ## setup dev environment
+	@npm ci
+
+spellcheck: ## run cspell
+	@echo "Running cSpell to checking spelling..."
+	@npx cspell "**/*" --color --config .vscode/cspell.json --must-find-files
+	@echo ""
 
 setup-poetry: ## setup python virtual environment
 	@poetry install

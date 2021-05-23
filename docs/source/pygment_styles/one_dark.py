@@ -17,7 +17,7 @@ class OneDark(Style):  # type: ignore
         Error: 'bg:#1e0010 #960050',
         Generic.Deleted: 'bg:#fdd #000',
         Generic.Deleted.Specific: 'bg:#faa #000',
-        Generic.Emph: 'italic',
+        Generic.Emph: 'italic',  # cspell:ignore emph
         Generic.Error: '#a00',
         Generic.Heading: '#5B6370',
         Generic.Inserted: 'bg:#dfd #a6e22e',
