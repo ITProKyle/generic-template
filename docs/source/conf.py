@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 # pylint: skip-file
 # type: ignore
-"""
-Configuration file for the Sphinx documentation builder.
+"""Configuration file for the Sphinx documentation builder.
 
 This file only contain a selection of the most common options. For a
 full list see the documentation: http://www.sphinx-doc.org/en/master/config

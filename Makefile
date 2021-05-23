@@ -22,12 +22,19 @@ fix-black: ## automatically fix all black errors
 fix-isort: ## automatically fix all isort errors
 	@poetry run isort .
 
-lint: ## run linters
-	@echo "Success!"
+fix-nitpick: ## automatically fix all nitpick errors
+	@poetry run nitpick run
+
+lint: lint-black lint-isort lint-flake8 ## run linters
 
 lint-black: ## run black
 	@echo "Running black... If this fails, run 'make fix-black' to resolve."
 	@poetry run black . --check --color --diff
+	@echo ""
+
+lint-flake8: ## run flake8
+	@echo "Running flake8..."
+	@poetry run flake8
 	@echo ""
 
 lint-isort: ## run isort
