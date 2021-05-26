@@ -45,7 +45,7 @@ jobs:
           path: .venv
           key: ${{ runner.os }}-poetry-${{ hashFiles('poetry.lock') }}
       - run: poetry install -vv
-      - uses: pre-commit/action@v2.0.0
+      - uses: pre-commit/action@v2.0.3
   test-python:
     name: Python Tests
     runs-on: ubuntu-latest
