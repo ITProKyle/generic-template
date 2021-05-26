@@ -25,7 +25,7 @@ fix-isort: ## automatically fix all isort errors
 fix-nitpick: ## automatically fix all nitpick errors
 	@poetry run nitpick run
 
-lint: lint-black lint-isort lint-flake8 ## run linters
+lint: lint-black lint-isort lint-pyright lint-flake8 ## run linters
 
 lint-black: ## run black
 	@echo "Running black... If this fails, run 'make fix-black' to resolve."
@@ -40,6 +40,11 @@ lint-flake8: ## run flake8
 lint-isort: ## run isort
 	@echo "Running isort... If this fails, run 'make fix-isort' to resolve."
 	@poetry run isort . --check-only
+	@echo ""
+
+lint-pyright: ## run pyright
+	@echo "Running pyright..."
+	@npx pyright --venv-path ./
 	@echo ""
 
 run-pre-commit: ## run pre-commit for all files
