@@ -17,6 +17,12 @@
   - name: feature
     color: 84b6eb
     description: Request or pull request for a new feature
+  - name: github_actions
+    color: 000000
+    description: Pull requests that update Github_actions code
+  - name: github/workflows
+    color: ffffff
+    description: Update to GitHub Action Workflow
   - name: good first issue
     color: 7057ff
     description: Good for newcomers
@@ -98,6 +104,3 @@
   - name: wontfix
     color: '000000'
     description: This will not be worked on
-  - name: github/workflows
-    color: ffffff
-    description: Update to GitHub Action Workflow

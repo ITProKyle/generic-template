@@ -3,6 +3,10 @@
 version: 2
 updates:
   - directory: /
+    labels:
+      - dependencies
+      - github/workflows
+      - github_actions
     open-pull-requests-limit: 5
     package-ecosystem: github-actions
     # reviewers:
@@ -24,6 +28,10 @@ updates:
     ignore:
       - dependency-name: boto3
       - dependency-name: botocore
+    labels:
+      - dependencies
+      - poetry
+      - python
     open-pull-requests-limit: 5
     package-ecosystem: pip
     # reviewers:
@@ -36,6 +44,10 @@ updates:
     ignore:
       - dependency-name: boto3
       - dependency-name: botocore
+    labels:
+      - dependencies
+      - poetry
+      - python
     open-pull-requests-limit: 5
     package-ecosystem: pip
     # reviewers:
