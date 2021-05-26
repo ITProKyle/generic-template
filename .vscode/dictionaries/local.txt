@@ -6,6 +6,7 @@ kwarg
 labelmaker
 noqa
 printf
+pyright
 repos
 subclassing
 ungrouped
