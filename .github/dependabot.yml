@@ -1,0 +1,46 @@
+# https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/configuration-options-for-dependency-updates
+
+version: 2
+updates:
+  - directory: /
+    open-pull-requests-limit: 5
+    package-ecosystem: github-actions
+    # reviewers:
+    #   - ITProKyle
+    schedule:
+      interval: daily
+      time: 08:00
+      timezone: America/New_York
+  - directory: /
+    open-pull-requests-limit: 5
+    package-ecosystem: npm
+    # reviewers:
+    #   - ITProKyle
+    schedule:
+      interval: daily
+      time: 08:00
+      timezone: America/New_York
+  - directory: /
+    ignore:
+      - dependency-name: boto3
+      - dependency-name: botocore
+    open-pull-requests-limit: 5
+    package-ecosystem: pip
+    # reviewers:
+    #   - ITProKyle
+    schedule:
+      interval: daily
+      time: 08:00
+      timezone: America/New_York
+  - directory: /docs
+    ignore:
+      - dependency-name: boto3
+      - dependency-name: botocore
+    open-pull-requests-limit: 5
+    package-ecosystem: pip
+    # reviewers:
+    #   - ITProKyle
+    schedule:
+      interval: daily
+      time: 08:00
+      timezone: America/New_York
