@@ -3,7 +3,7 @@
   "devDependencies": {
     "@cspell/dict-python": "^1.0.35",
     "cspell": "^5.6.0",
-    "pyright": "^1.1.146"
+    "pyright": "^1.1.147"
   },
   "name": "generic-template",
   "version": "0.0.0"
