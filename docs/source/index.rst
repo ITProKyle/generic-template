@@ -8,7 +8,6 @@ DESCRIPTION HERE
    :caption: Documentation
 
    example_page
-   changelog
 
 
 Indices and Tables
