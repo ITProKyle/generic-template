@@ -1,7 +1,6 @@
 {
     "recommendations": [
         "editorconfig.editorconfig",
-        "mauve.terraform",
         "ms-python.python",
         "ms-python.vscode-pylance",
         "njpwerner.autodocstring",
