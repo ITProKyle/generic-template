@@ -279,6 +279,19 @@ python-versions = "*"
 flake8 = "*"
 
 [[package]]
+name = "flake8-print"
+version = "4.0.0"
+description = "print statement checker plugin for flake8"
+category = "dev"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+flake8 = ">=3.0"
+pycodestyle = "*"
+six = "*"
+
+[[package]]
 name = "identify"
 version = "2.2.5"
 description = "File identification library for Python"
@@ -990,7 +1003,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "e1574f0bfdcc09ff4f532bf7d42349ab786969e58ba073ed05ec3b2ea84edb5e"
+content-hash = "3f6262caf78ad3ff9a735a44e74940e56d223f30da2a38910b89813a7967ae3c"
 
 [metadata.files]
 alabaster = [
@@ -1147,6 +1160,10 @@ flake8-docstrings = [
 flake8-polyfill = [
     {file = "flake8-polyfill-1.0.2.tar.gz", hash = "sha256:e44b087597f6da52ec6393a709e7108b2905317d0c0b744cdca6208e670d8eda"},
     {file = "flake8_polyfill-1.0.2-py2.py3-none-any.whl", hash = "sha256:12be6a34ee3ab795b19ca73505e7b55826d5f6ad7230d31b18e106400169b9e9"},
+]
+flake8-print = [
+    {file = "flake8-print-4.0.0.tar.gz", hash = "sha256:5afac374b7dc49aac2c36d04b5eb1d746d72e6f5df75a6ecaecd99e9f79c6516"},
+    {file = "flake8_print-4.0.0-py3-none-any.whl", hash = "sha256:6c0efce658513169f96d7a24cf136c434dc711eb00ebd0a985eb1120103fe584"},
 ]
 identify = [
     {file = "identify-2.2.5-py2.py3-none-any.whl", hash = "sha256:9c3ab58543c03bd794a1735e4552ef6dec49ec32053278130d525f0982447d47"},
