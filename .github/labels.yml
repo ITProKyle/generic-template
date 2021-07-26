@@ -47,6 +47,9 @@
   - name: patch
     color: ffffff
     description: Patch change resulting in a patch release
+  - name: poetry
+    color: '306998'
+    description: Update to Poetry configuration
   - name: priority:critical
     color: e11d21
     description: Critical priority issue or pull request
