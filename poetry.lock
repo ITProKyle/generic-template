@@ -292,6 +292,22 @@ pycodestyle = "*"
 six = "*"
 
 [[package]]
+name = "flake8-use-fstring"
+version = "1.1"
+description = "Flake8 plugin for string formatting style."
+category = "dev"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+flake8 = ">=3.0.0,<4.0.0"
+
+[package.extras]
+ci = ["coverage (>=4.0.0,<5.0.0)", "pytest (>=4)", "pytest-cov (>=2)", "flake8-builtins", "flake8-commas", "flake8-fixme", "flake8-print", "flake8-quotes", "flake8-todo", "python-coveralls"]
+dev = ["coverage (>=4.0.0,<5.0.0)", "pytest (>=4)", "pytest-cov (>=2)", "flake8-builtins", "flake8-commas", "flake8-fixme", "flake8-print", "flake8-quotes", "flake8-todo"]
+test = ["coverage (>=4.0.0,<5.0.0)", "pytest (>=4)", "pytest-cov (>=2)", "flake8-builtins", "flake8-commas", "flake8-fixme", "flake8-print", "flake8-quotes", "flake8-todo"]
+
+[[package]]
 name = "identify"
 version = "2.2.5"
 description = "File identification library for Python"
@@ -1003,7 +1019,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "3f6262caf78ad3ff9a735a44e74940e56d223f30da2a38910b89813a7967ae3c"
+content-hash = "7e5249056120345fac4562f9358b3768b0cd75386a40e39305010fe3b7bc8869"
 
 [metadata.files]
 alabaster = [
@@ -1164,6 +1180,9 @@ flake8-polyfill = [
 flake8-print = [
     {file = "flake8-print-4.0.0.tar.gz", hash = "sha256:5afac374b7dc49aac2c36d04b5eb1d746d72e6f5df75a6ecaecd99e9f79c6516"},
     {file = "flake8_print-4.0.0-py3-none-any.whl", hash = "sha256:6c0efce658513169f96d7a24cf136c434dc711eb00ebd0a985eb1120103fe584"},
+]
+flake8-use-fstring = [
+    {file = "flake8-use-fstring-1.1.tar.gz", hash = "sha256:a0eea849ffe33fb6903c210c243c0f418da86a530e46cb13e64f1bdb045f22dc"},
 ]
 identify = [
     {file = "identify-2.2.5-py2.py3-none-any.whl", hash = "sha256:9c3ab58543c03bd794a1735e4552ef6dec49ec32053278130d525f0982447d47"},

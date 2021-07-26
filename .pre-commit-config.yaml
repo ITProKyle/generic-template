@@ -67,6 +67,7 @@ repos:
           - flake8-comprehensions
           - flake8-docstrings
           - flake8-print
+          - flake8-use-fstring
           - nitpick
   - repo: https://github.com/igorshubovych/markdownlint-cli
     rev: v0.27.1
