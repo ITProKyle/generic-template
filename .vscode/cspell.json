@@ -52,5 +52,8 @@
     ],
     "language": "en",
     "maxNumberOfProblems": 100,
-    "version": "0.1"
+    "version": "0.1",
+    "words": [
+        "fstring"
+    ]
 }
