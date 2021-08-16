@@ -9,7 +9,7 @@ python = "^3.8"
 
 # uncomment and rename to the name of the top-level package to include in docs
 # my-package = { develop = true, path = "../" }
-Pygments = "^2.9.0"
+Pygments = "^2.10.0"
 Sphinx = "^4.1.1"
 recommonmark = "^0.7.1"
 sphinx-rtd-theme = "^0.5.2"
