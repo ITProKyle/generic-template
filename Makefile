@@ -54,7 +54,9 @@ setup: setup-poetry setup-pre-commit ## setup dev environment
 	@npm ci
 
 setup-poetry: ## setup python virtual environment
-	@poetry install
+	@poetry install \
+		--extras docs \
+		--remove-untracked
 
 setup-pre-commit: ## install pre-commit git hooks
 	@poetry run pre-commit install
