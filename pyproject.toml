@@ -8,6 +8,11 @@ license = "Apache-2.0"
 [tool.poetry.dependencies]
 python = "^3.8"
 
+pygments = { version = "^2.10.0", optional = true }  # docs
+recommonmark = { version = "^0.7.1", optional = true }  # docs
+sphinx = { version = "^4.1.2", optional = true }  # docs
+sphinx-rtd-theme = { version = "^0.5.2", optional = true }  # docs
+
 [tool.poetry.dev-dependencies]
 black = "21.7b0"
 coverage = "^5.5"
@@ -27,7 +32,14 @@ pylint = "^2.9.1"
 pytest = "^6.2.2"
 pytest-cov = "^2.12.1"
 pytest-mock = "^3.5.1"
-recommonmark = "^0.7"
+
+[tool.poetry.extras]
+docs = [
+  "pygments",
+  "recommonmark",
+  "sphinx",
+  "sphinx-rtd-theme",
+]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
