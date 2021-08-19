@@ -5,7 +5,7 @@ minimum_pre_commit_version: 2.13.0
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.4.0
+    rev: v4.0.1
     hooks:
       - id: check-json
       - id: check-merge-conflict
@@ -47,7 +47,7 @@ repos:
             \.readthedocs.yml
           )$
   - repo: https://github.com/timothycrosley/isort
-    rev: 5.9.2
+    rev: 5.9.3
     hooks:
       - id: isort
   - repo: https://github.com/psf/black
@@ -70,6 +70,6 @@ repos:
           - flake8-use-fstring
           - nitpick
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.27.1
+    rev: v0.28.1
     hooks:
       - id: markdownlint
