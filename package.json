@@ -2,7 +2,7 @@
   "description": "Version management for npm tools.",
   "devDependencies": {
     "@cspell/dict-python": "^1.0.37",
-    "cspell": "^5.7.2",
+    "cspell": "^5.8.1",
     "pyright": "^1.1.162"
   },
   "name": "generic-template",
