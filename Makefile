@@ -22,9 +22,6 @@ fix-black: ## automatically fix all black errors
 fix-isort: ## automatically fix all isort errors
 	@poetry run isort .
 
-fix-nitpick: ## automatically fix all nitpick errors
-	@poetry run nitpick run
-
 lint: lint-black lint-isort lint-pyright lint-flake8 ## run linters
 
 lint-black: ## run black

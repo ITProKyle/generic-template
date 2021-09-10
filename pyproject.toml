@@ -24,7 +24,6 @@ flake8-print = "^4.0.0"  # flake8 plugin
 flake8-use-fstring = "^1.1"  # flake8 plugin
 isort = "^5.9.3"
 mock = "^4.0.3"
-nitpick = "^0.27.0"  # flake8 plugin
 pep8-naming = "^0.12.1"  # flake8 plugin
 pre-commit = "^2.14.0"
 pydocstyle = "^6.1.1"
@@ -79,18 +78,26 @@ skip = [
 ]
 
 
-[tool.nitpick]
-style = [
-  "https://raw.githubusercontent.com/ITProKyle/nitpick-styles/master/styles/editorconfig.toml",
-  "https://raw.githubusercontent.com/ITProKyle/nitpick-styles/master/styles/flake8/default.toml",
-  "https://raw.githubusercontent.com/ITProKyle/nitpick-styles/master/styles/nitpick-base.toml",
-  "https://raw.githubusercontent.com/ITProKyle/nitpick-styles/master/styles/pylint/default.toml",
-]
-cache = "never"
-
-
 [tool.pylint.basic]
-good-names = [ "_", "a", "b", "ca", "ci", "db", "f", "fn", "i", "id", "j", "k", "ok", "s3", "ui", "up", "v",]
+good-names = [
+  "_",
+  "a",
+  "b",
+  "ca",
+  "ci",
+  "db",
+  "f",
+  "fn",
+  "i",
+  "id",
+  "j",
+  "k",
+  "ok",
+  "s3",
+  "ui",
+  "up",
+  "v",
+]
 
 [tool.pylint.classes]
 defining-attr-methods = [ "__init__", "__new__",]
