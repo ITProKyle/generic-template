@@ -19,7 +19,7 @@ help: ## show this message
 	done
 
 docs: ## delete current HTML docs & build fresh HTML docs
-	@make -C docs clean html
+	@make -C docs docs
 
 docs-changes: ## build HTML docs; only builds changes detected by Sphinx
 	@make -C docs html
