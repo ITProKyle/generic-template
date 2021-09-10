@@ -1,21 +1,11 @@
 {
     "dictionaries": [
         "bash",
-        "local",
-        "pypi",
         "python",
         "softwareTerms",
         "sphinx"
     ],
     "dictionaryDefinitions": [
-        {
-            "name": "local",
-            "path": "./dictionaries/local.txt"
-        },
-        {
-            "name": "pypi",
-            "path": "./dictionaries/pypi.txt"
-        },
         {
             "name": "sphinx",
             "path": "./dictionaries/sphinx.txt"
@@ -51,9 +41,36 @@
         "@cspell/dict-python/cspell-ext.json"
     ],
     "language": "en",
+    "languageSettings": [
+        {
+            "allowCompoundWords": true,
+            "dictionaries": [
+                "python"
+            ],
+            "languageId": "toml"
+        }
+    ],
     "maxNumberOfProblems": 100,
-    "version": "0.1",
+    "version": "0.2",
     "words": [
-        "fstring"
+        "boto",
+        "docstrings",
+        "fgrep",
+        "fstring",
+        "howto",
+        "kwarg",
+        "labelmaker",
+        "noqa",
+        "printf",
+        "pydoc",
+        "pygment",
+        "pyright",
+        "recommonmark",
+        "repos",
+        "subclassing",
+        "ungrouped",
+        "venv",
+        "virtualenvs",
+        "xargs"
     ]
 }
