@@ -15,7 +15,7 @@ clean:
 	@rm -rf source/apidocs/*
 	@echo "Removed apidocs from previous build"
 
-docs: clean html open
+docs: clean html
 
 open:
 	@open build/html/index.html

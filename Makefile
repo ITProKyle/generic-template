@@ -1,3 +1,5 @@
+.PHONY: docs
+
 SHELL := /bin/bash
 
 help: ## show this message
@@ -15,6 +17,12 @@ help: ## show this message
 		printf '\033[0m'; \
 		printf "%s\n" $$help_info; \
 	done
+
+docs: ## delete current HTML docs & build fresh HTML docs
+	@make -C docs clean html
+
+docs-changes: ## build HTML docs; only builds changes detected by Sphinx
+	@make -C docs html
 
 fix-black: ## automatically fix all black errors
 	@poetry run black .
@@ -44,10 +52,15 @@ lint-pyright: ## run pyright
 	@npx pyright --venv-path ./
 	@echo ""
 
+open-docs: ## open docs (HTML files must already exists)
+	@make -C docs open
+
 run-pre-commit: ## run pre-commit for all files
 	@poetry run pre-commit run -a
 
-setup: setup-poetry setup-pre-commit ## setup dev environment
+setup: setup-poetry setup-pre-commit setup-npm ## setup dev environment
+
+setup-npm: ## install node dependencies with npm
 	@npm ci
 
 setup-poetry: ## setup python virtual environment
