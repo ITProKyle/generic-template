@@ -146,3 +146,31 @@ notes = [
 msg-template = "{path}:{line}:{column}: {msg_id}: {msg} ({symbol})"
 output-format = "colorized"
 score = "yes"
+
+
+[tool.pyright]
+exclude = [
+  "**/__pycache__",
+  "**/.eggs",
+  "**/.git",
+  "**/.runway",
+  "**/.venv",
+  "**/docs",
+  "**/node_modules",
+  "**/typings",
+]
+pythonVersion = "3.8"
+reportDuplicateImport = "none"
+reportImportCycles = "none"
+reportIncompatibleMethodOverride = "warning"
+reportMissingTypeStubs = "none"
+reportPrivateUsage = "none"
+reportUnknownMemberType = "none"
+reportUnnecessaryIsInstance = "warning"
+reportUnusedImport = "none"
+reportUnusedVariable = "none"
+reportWildcardImportFromLibrary = "none"
+strictParameterNoneValue = false
+typeCheckingMode = "strict"
+useLibraryCodeForTypes = true
+venv = ".venv"
