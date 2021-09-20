@@ -5,6 +5,22 @@
   - name: bug
     color: d73a4a
     description: Something isn't working
+  - name: changelog:major
+    color: ffffff
+    description: Major change resulting in a major release
+    # from_name: major  # uncomment if converting from previous labels
+  - name: changelog:minor
+    color: ffffff
+    description: Minor change resulting in a minor release
+    # from_name: minor  # uncomment if converting from previous labels
+  - name: changelog:patch
+    color: ffffff
+    description: Patch change resulting in a patch release
+    # from_name: patch  # uncomment if converting from previous labels
+  - name: changelog:skip
+    color: ffffff
+    description: Don't include this pull request in the release change log
+    # from_name: skip-changelog  # uncomment if converting from previous labels
   - name: dependencies
     color: 0366d6
     description: Pull request that updates a dependency file
@@ -18,11 +34,9 @@
     color: 84b6eb
     description: Request or pull request for a new feature
   - name: github_actions
-    color: 000000
+    color: '000000'
     description: Pull requests that update Github_actions code
-  - name: github/workflows
-    color: ffffff
-    description: Update to GitHub Action Workflow
+    # from_name: github/workflows  # uncomment if converting from previous labels
   - name: good first issue
     color: 7057ff
     description: Good for newcomers
@@ -38,15 +52,6 @@
   - name: maintenance
     color: fbca04
     description: General repo or CI/CD upkeep
-  - name: major
-    color: ffffff
-    description: Major change resulting in a major release
-  - name: minor
-    color: ffffff
-    description: Minor change resulting in a minor release
-  - name: patch
-    color: ffffff
-    description: Patch change resulting in a patch release
   - name: poetry
     color: '306998'
     description: Update to Poetry configuration
@@ -71,9 +76,6 @@
   - name: release
     color: e4e669
     description: A release task or pull request
-  - name: skip-changelog
-    color: ffffff
-    description: Don't include this pull request in the release change log
   - name: status:abandoned
     color: '000000'
     description: Issue or pull request abandoned by author
