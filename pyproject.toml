@@ -14,7 +14,7 @@ sphinx = { version = "^4.2.0", optional = true }  # docs
 sphinx-rtd-theme = { version = "^1.0.0", optional = true }  # docs
 
 [tool.poetry.dev-dependencies]
-black = "21.8b0"
+black = "21.9b0"
 coverage = "^5.5"
 flake8 = "^3.9.2"
 flake8-bugbear = "^21.9.1"  # flake8 plugin
