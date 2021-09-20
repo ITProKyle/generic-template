@@ -30,6 +30,9 @@ fix-black: ## automatically fix all black errors
 fix-isort: ## automatically fix all isort errors
 	@poetry run isort .
 
+fix-md: ## automatically fix markdown format errors
+	@poetry run pre-commit run mdformat --all-files
+
 lint: lint-black lint-isort lint-pyright lint-flake8 ## run linters
 
 lint-black: ## run black

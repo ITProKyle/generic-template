@@ -1,10 +1,9 @@
 ---
 name: General Question
 about: General question about the project, usage, design, etc.
-title: "[QUESTION]"
+title: '[QUESTION]'
 labels: priority:low, status:review_needed, question
-assignees: ""
-
+assignees: ''
 ---
 
 **Question**
