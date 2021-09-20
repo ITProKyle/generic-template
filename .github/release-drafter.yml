@@ -16,7 +16,7 @@ autolabeler:  # cspell:ignore autolabeler
     branch: [/^(feat|feature)\/.*/]
   - label: maintenance
     branch: [/^(chore|maint|maintain|maintenance)\/.*/]
-  - label: patch
+  - label: changelog:patch
     branch: [/^(bug|bugfix|fix|hotfix)\/.*/]
   - label: poetry
     files:
