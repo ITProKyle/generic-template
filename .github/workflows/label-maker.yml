@@ -24,5 +24,4 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           yaml-file: .github/labels.yml
           skip-delete: false
-          # dry-run: ${{ github.ref != 'refs/heads/master' }}
-          dry-run: false
+          dry-run: ${{ github.ref != 'refs/heads/master' }}
