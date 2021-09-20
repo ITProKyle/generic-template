@@ -6,9 +6,9 @@ A generic template for GitHub repos.
 
 ## Commands
 
-| Command               | Description                            |
-|-----------------------|----------------------------------------|
-| `make <cmd>`          | does something                         |
+| Command      | Description    |
+| ------------ | -------------- |
+| `make <cmd>` | does something |
 
 ## Setup
 
