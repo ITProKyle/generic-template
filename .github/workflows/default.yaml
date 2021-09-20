@@ -18,14 +18,9 @@ jobs:
         with:
           node-version: '16'
       - run: npm ci
-      - uses: actions/setup-python@v2
+      - uses: ITProKyle/action-setup-python@v0.1.0
         with:
           python-version: ${{ matrix.python-version }}
-      - uses: Gr1N/setup-poetry@v7
-      - uses: actions/cache@v2
-        with:
-          path: .venv
-          key: ${{ runner.os }}-poetry-${{ hashFiles('poetry.lock') }}
       - run: poetry install -vv
       - run: make lint
   pre-commit:
@@ -36,14 +31,9 @@ jobs:
         python-version: [3.8]
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - uses: ITProKyle/action-setup-python@v0.1.0
         with:
           python-version: ${{ matrix.python-version }}
-      - uses: Gr1N/setup-poetry@v7
-      - uses: actions/cache@v2
-        with:
-          path: .venv
-          key: ${{ runner.os }}-poetry-${{ hashFiles('poetry.lock') }}
       - run: poetry install -vv
       - uses: pre-commit/action@v2.0.3
   test-python:
@@ -55,13 +45,8 @@ jobs:
         python-version: [3.8]
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - uses: ITProKyle/action-setup-python@v0.1.0
         with:
           python-version: ${{ matrix.python-version }}
-      - uses: Gr1N/setup-poetry@v7
-      - uses: actions/cache@v2
-        with:
-          path: .venv
-          key: ${{ runner.os }}-poetry-${{ hashFiles('poetry.lock') }}
       - run: poetry install -vv
       - run: make test
