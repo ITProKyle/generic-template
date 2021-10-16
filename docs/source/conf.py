@@ -7,6 +7,7 @@ This file only contain a selection of the most common options. For a
 full list see the documentation: http://www.sphinx-doc.org/en/master/config
 
 """
+import os
 import sys
 from pathlib import Path
 
@@ -42,6 +43,7 @@ extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.napoleon",
     "sphinx.ext.viewcode",
+    "sphinxcontrib.apidoc",
 ]
 highlight_language = "default"
 intersphinx_mapping = {}
@@ -78,6 +80,11 @@ html_show_sphinx = True
 html_static_path = ["_static"]  # dir with static files relative to this dir
 
 
+# -- Options for sphinx-apidoc -----------------------------------------------
+# https://www.sphinx-doc.org/en/master/man/sphinx-apidoc.html#environment
+os.environ["SPHINX_APIDOC_OPTIONS"] = "members"
+
+
 # -- Options of sphinx.ext.autodoc -------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html#configuration
 autoclass_content = "class"  # TODO add to runway
@@ -97,3 +104,21 @@ autodoc_typehints = "signature"
 napoleon_google_docstring = True
 napoleon_include_init_with_doc = False
 napoleon_type_aliases = autodoc_type_aliases
+
+
+# -- Options for sphinxcontrib.apidoc  ---------------------------------------
+# https://github.com/sphinx-contrib/apidoc
+apidoc_excluded_paths = [
+    ".demo",
+    ".venv",
+    "docs",
+    "node_modules",
+    "test*",
+    "typings",
+]
+apidoc_extra_args = [f"--templatedir={SRC_DIR / '_templates/apidocs'}"]
+apidoc_module_dir = "../../"
+apidoc_module_first = True
+apidoc_output_dir = "apidocs"
+apidoc_separate_modules = True
+apidoc_toc_file = "index"
