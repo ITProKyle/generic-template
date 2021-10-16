@@ -7,6 +7,9 @@ autoclass
 autodoc
 automodule
 bysource
+docname
+docnames
+endfor
 epub
 genindex
 htbp
