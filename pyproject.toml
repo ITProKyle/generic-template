@@ -100,7 +100,7 @@ good-names = [
 ]
 
 [tool.pylint.classes]
-defining-attr-methods = [ "__init__", "__new__",]
+defining-attr-methods = ["__init__", "__new__"]
 
 [tool.pylint.design]
 max-args = 50
