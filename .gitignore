@@ -32,8 +32,6 @@ coverage.xml
 db.sqlite3
 develop-eggs/
 dist/
-docs/_build/
-docs/source/changelog.md
 downloads/
 eggs/
 htmlcov/
