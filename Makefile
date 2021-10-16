@@ -76,8 +76,13 @@ setup-pre-commit: ## install pre-commit git hooks
 
 spellcheck: ## run cspell
 	@echo "Running cSpell to checking spelling..."
-	@npx cspell "**/*" --color --config .vscode/cspell.json --must-find-files
-	@echo ""
+	@npx cspell "**/*" \
+		--color \
+		--config .vscode/cspell.json \
+		--must-find-files \
+		--no-progress \
+		--relative \
+		--show-context
 
 test: ## run tests
 	@echo "Success!"
