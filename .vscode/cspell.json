@@ -51,6 +51,7 @@
     "version": "0.2",
     "words": [
         "boto",
+        "direnv",
         "docstrings",
         "favicon",
         "fgrep",
@@ -59,10 +60,13 @@
         "howto",
         "kwarg",
         "labelmaker",
+        "maint",
         "mdformat",
         "noqa",
+        "overlining",
         "printf",
         "pydoc",
+        "pyenv",
         "pygment",
         "pyright",
         "recommonmark",
@@ -71,6 +75,7 @@
         "ungrouped",
         "venv",
         "virtualenvs",
+        "winget",
         "xargs"
     ]
 }

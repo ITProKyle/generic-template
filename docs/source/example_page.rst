@@ -1,5 +1,6 @@
+############
 Example Page
-============
+############
 
 Plain text with some ``inline code``.
 
