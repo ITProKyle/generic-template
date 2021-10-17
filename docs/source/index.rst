@@ -1,7 +1,9 @@
+################
 generic-template
-================
+################
 
-DESCRIPTION HERE
+Generic project template to go from zero to developing in seconds.
+
 
 .. toctree::
   :maxdepth: 2
@@ -12,15 +14,9 @@ DESCRIPTION HERE
 
 .. toctree::
   :caption: Developers Guide
+  :glob:
   :hidden:
   :maxdepth: 2
 
   apidocs/index
-
-
-Indices and Tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+  developers/**

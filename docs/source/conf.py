@@ -41,6 +41,7 @@ exclude_patterns = []
 extensions = [
     "recommonmark",
     "sphinx.ext.autodoc",
+    "sphinx.ext.autosectionlabel",
     "sphinx.ext.napoleon",
     "sphinx.ext.viewcode",
     "sphinxcontrib.apidoc",
@@ -97,6 +98,12 @@ autodoc_default_options = {
 }
 autodoc_type_aliases = {}
 autodoc_typehints = "signature"
+
+
+# -- Options for sphinx.ext.autosectionlabel ---------------------------------
+# https://www.sphinx-doc.org/en/master/usage/extensions/autosectionlabel.html
+autosectionlabel_prefix_document = True
+autosectionlabel_maxdepth = None
 
 
 # -- Options for sphinx.ext.napoleon  ----------------------------------------
