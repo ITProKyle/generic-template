@@ -18,7 +18,7 @@ sphinxcontrib-apidoc = { version = "^0.3", optional = true }  # docs
 black = "21.9b0"
 coverage = "^6.2"
 flake8 = "^3.9.2"
-flake8-bugbear = "^21.9.2"  # flake8 plugin
+flake8-bugbear = "^21.11.29"  # flake8 plugin
 flake8-comprehensions = "^3.6.1"  # flake8 plugin
 flake8-docstrings = "^1.6.0"  # flake8 plugin
 flake8-print = "^4.0.0"  # flake8 plugin
