@@ -15,7 +15,7 @@ sphinx-rtd-theme = { version = "^1.0.0", optional = true }  # docs
 sphinxcontrib-apidoc = { version = "^0.3", optional = true }  # docs
 
 [tool.poetry.dev-dependencies]
-black = "21.9b0"
+black = "21.12b0"
 coverage = "^6.2"
 flake8 = "^3.9.2"
 flake8-bugbear = "^21.9.2"  # flake8 plugin
