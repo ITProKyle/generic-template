@@ -8,7 +8,7 @@ license = "Apache-2.0"
 [tool.poetry.dependencies]
 python = "^3.8"
 
-pygments = { version = "^2.10.0", optional = true }  # docs
+pygments = { version = "^2.11.2", optional = true }  # docs
 recommonmark = { version = "^0.7.1", optional = true }  # docs
 sphinx = { version = "^4.3.1", optional = true }  # docs
 sphinx-rtd-theme = { version = "^1.0.0", optional = true }  # docs
