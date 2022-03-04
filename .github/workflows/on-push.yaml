@@ -1,4 +1,4 @@
-name: Test => Build => Deploy
+name: On Push
 
 
 on: push
@@ -36,6 +36,17 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - run: poetry install -vv
       - uses: pre-commit/action@v2.0.3
+  spell-check:
+    # There is an official action published by cSpell.
+    # v1.1.1 was tested but did not function as desired so we are using the CLI.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '15'
+      - run: npm ci
+      - run: make spellcheck
   test-python:
     name: Python Tests
     runs-on: ubuntu-latest
