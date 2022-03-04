@@ -5,7 +5,7 @@ minimum_pre_commit_version: 2.13.0
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.0.1
+    rev: v4.1.0
     hooks:
       - id: check-json
       - id: check-merge-conflict
@@ -47,11 +47,11 @@ repos:
             \.readthedocs.yml
           )$
   - repo: https://github.com/timothycrosley/isort
-    rev: 5.9.3
+    rev: 5.10.1
     hooks:
       - id: isort
   - repo: https://github.com/psf/black
-    rev: 21.9b0
+    rev: 22.1.0
     hooks:
       - id: black
         args:
@@ -69,7 +69,7 @@ repos:
           - flake8-print
           - flake8-use-fstring
   - repo: https://github.com/executablebooks/mdformat
-    rev: 0.7.9
+    rev: 0.7.13
     hooks:
       - id: mdformat
         additional_dependencies:
@@ -77,6 +77,6 @@ repos:
           - mdformat-gfm
           - mdformat-toc
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.28.1
+    rev: v0.31.1
     hooks:
       - id: markdownlint
