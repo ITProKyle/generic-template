@@ -44,6 +44,7 @@
     "maxNumberOfProblems": 100,
     "version": "0.2",
     "words": [
+        "autofix",
         "boto",
         "direnv",
         "docstrings",
@@ -70,6 +71,7 @@
         "venv",
         "virtualenvs",
         "winget",
-        "xargs"
+        "xargs",
+        "yamlfmt"
     ]
 }
