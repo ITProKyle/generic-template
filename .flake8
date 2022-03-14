@@ -32,7 +32,7 @@ extend-ignore =
     E203,
     # line break before operator
     W503
-ignore-decorators = overload
-max-line-length = 98
+ignore-decorators = abstractmethod|overload
+max-line-length = 120
 show-source = true
 statistics = true
