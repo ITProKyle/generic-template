@@ -2,8 +2,6 @@ extends: default
 
 ignore: |
   node_modules
-  .serverless
-  .terraform
 
 rules:
   # Don't need --- in our single doc files

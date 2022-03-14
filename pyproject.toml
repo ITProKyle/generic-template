@@ -90,7 +90,6 @@ profile = "black"
 skip = [
   ".eggs",
   ".git",
-  ".serverless",
   ".venv",
   "_build",
   "build",
