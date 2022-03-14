@@ -1,31 +1,19 @@
 root = true
 
 [*]
+charset = utf-8
 end_of_line = lf
+indent_size = 2
 indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
+
+[*.{json,py}]
 indent_size = 4
-
-[*.json]
-indent_size = 4
-
-[*.{html,md,rst,xml,yml,yaml}]
-indent_size = 2
-
-[*.py]
-charset = utf-8
-indent_size = 4
-
-[*.rst]
-indent_size = 2
 
 [Makefile]
 indent_size = 4
 indent_style = tab
 
 [{package,package-lock}.json]
-indent_size = 2
-
-[*.{html,js,jsx,rst,toml,ts,xml,yml,yaml}]
 indent_size = 2
