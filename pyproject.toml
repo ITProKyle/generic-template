@@ -99,30 +99,30 @@ skip = [
 
 
 [tool.pylint.basic]
+# http://pylint.pycqa.org/page/technical_reference/features.html#basic-checker
 good-names = [
   "_",
-  "a",
-  "b",
-  "ca",
-  "ci",
-  "db",
   "f",
   "fn",
   "i",
   "id",
   "j",
   "k",
-  "ok",
-  "s3",
-  "ui",
-  "up",
+  "os",
   "v",
 ]
 
 [tool.pylint.classes]
+# http://pylint.pycqa.org/page/technical_reference/features.html#classes-checker
 defining-attr-methods = ["__init__", "__new__"]
+exclude-protected = [
+  "_session",  # for boto3.session.Session
+  "_client_config",  # boto3.client.Client._client_config contains info like region
+  "_endpoint",  # boto3.client.Client._endpoint contains s3 endpoint info
+]
 
 [tool.pylint.design]
+# http://pylint.pycqa.org/page/technical_reference/features.html#design-checker-options
 max-args = 50
 max-attributes = 50
 max-bool-expr = 5
@@ -135,37 +135,48 @@ max-statements = 50
 min-public-methods = 0
 
 [tool.pylint.format]
+# http://pylint.pycqa.org/page/technical_reference/features.html#format-checker
 max-line-length = 100
 max-module-lines = 1000
 
 [tool.pylint.imports]
+# http://pylint.pycqa.org/page/technical_reference/features.html#imports-checker
 allow-wildcard-with-all = "no"
 
 [tool.pylint.logging]
+# http://pylint.pycqa.org/page/technical_reference/features.html#logging-checker
 logging-format-style = "old"
 
 [tool.pylint.master]
+# http://pylint.pycqa.org/page/technical_reference/features.html#general-options
+ignore-patterns = [".+py[ci]$"]
 jobs = 0
 
 [tool.pylint.message_control]
+# http://pylint.pycqa.org/page/technical_reference/features.html#messages-control-options
 disable = [
-  "line-too-long",
-  "missing-class-docstring",
-  "missing-function-docstring",
-  "missing-module-docstring",
-  "similarities",
-  "ungrouped-imports",
+  "line-too-long",  # flake8 overlap
+  "missing-class-docstring",  # flake8 (pydocstyle) overlap
+  "missing-function-docstring",  # flake8 (pydocstyle) overlap
+  "missing-module-docstring",  # flake8 (pydocstyle) overlap
+  "similarities",  # black overcomplicated this
+  "ungrouped-imports", # false positive when using TYPE_CHECKING; isort should cover this
+  "unused-import",  # flake8 overlap (F401)
 ]
 
 [tool.pylint.miscellaneous]
-notes = [
-  "FIXME",
-]
+# http://pylint.pycqa.org/page/technical_reference/features.html#miscellaneous-checker
+notes = ["FIXME"]
 
 [tool.pylint.reports]
+# https://pylint.pycqa.org/page/technical_reference/features.html#reports-options
 msg-template = "{path}:{line}:{column}: {msg_id}: {msg} ({symbol})"
 output-format = "colorized"
 score = "yes"
+
+[tool.pylint.typecheck]
+# http://pylint.pycqa.org/page/technical_reference/features.html#typecheck-checker
+ignored-modules = ["_typeshed", "distutils"]
 
 
 [tool.pyright]
