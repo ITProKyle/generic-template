@@ -16,6 +16,7 @@
     ],
     "editor.tabSize": 2,
     "files.insertFinalNewline": true,
+    "python.defaultInterpreterPath": ".venv/bin/python",
     "python.formatting.provider": "black",
     "python.linting.flake8Enabled": true,
     "python.linting.mypyEnabled": false,
@@ -23,7 +24,6 @@
         "--rcfile=pyproject.toml"
     ],
     "python.linting.pylintEnabled": true,
-    "python.pythonPath": ".venv/bin/python",
     "restructuredtext.confPath": "${workspaceFolder}/docs/source",
     "restructuredtext.linter.extraArgs": [
         "--ignore D001"
