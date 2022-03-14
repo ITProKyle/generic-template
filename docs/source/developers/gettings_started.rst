@@ -11,9 +11,6 @@ Before getting started, `fork this repo`_ and `clone your fork`_.
   The fork & clone strategy is primarily for open source projects.
   Private projects should generally be cloned directly as long as you have write access.
 
-.. contents:: Table of Contents
-  :local:
-
 
 
 *****************************

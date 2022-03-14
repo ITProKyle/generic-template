@@ -4,9 +4,6 @@ Documentation Style Guide
 
 Style guides to follow when writing documentation for this project.
 
-.. contents:: Table of Contents
-  :local:
-
 
 
 **********

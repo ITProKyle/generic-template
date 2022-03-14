@@ -2,9 +2,6 @@
 Branching Strategy
 ##################
 
-.. contents:: Table of Contents
-  :local:
-
 
 
 *************
