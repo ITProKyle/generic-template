@@ -15,6 +15,9 @@
         120
     ],
     "editor.tabSize": 2,
+    "esbonio.server.enabled": false,
+    "esbonio.sphinx.buildDir": "${workspaceFolder}/docs/build",
+    "esbonio.sphinx.confDir": "/Users/e153067/repos/github/ITProKyle/generic-template/docs/source",
     "files.insertFinalNewline": true,
     "python.defaultInterpreterPath": ".venv/bin/python",
     "python.formatting.provider": "black",
@@ -25,8 +28,10 @@
     ],
     "python.linting.pylintEnabled": true,
     "restructuredtext.confPath": "${workspaceFolder}/docs/source",
-    "restructuredtext.linter.extraArgs": [
-        "--ignore D001"
+    "restructuredtext.linter.disabledLinters": [
+        "doc8",
+        "rst-lint",
+        "rstcheck"
     ],
     "yaml.customTags": [
         "!Equals sequence",

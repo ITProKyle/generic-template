@@ -8,25 +8,17 @@ full list see the documentation: http://www.sphinx-doc.org/en/master/config
 
 """
 import os
-import sys
 from pathlib import Path
-
-# add to path for imports
-sys.path.insert(0, str(Path.cwd()))
-
-from pygment_styles import OneDark, pygments_patch_style  # noqa
 
 DOCS_DIR = Path(__file__).parent.parent.resolve()
 ROOT_DIR = DOCS_DIR.parent
 SRC_DIR = DOCS_DIR / "source"
 
-pygments_patch_style("one_dark", OneDark)
-
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 project = "generic-template"
-copyright = "2021, Kyle Finley"
+copyright = "2022, Kyle Finley"
 author = "Kyle Finley"
 release = "0.0.0"
 version = release
@@ -44,6 +36,8 @@ extensions = [
     "sphinx.ext.autosectionlabel",
     "sphinx.ext.napoleon",
     "sphinx.ext.viewcode",
+    "sphinx_copybutton",
+    "sphinx_design",
     "sphinxcontrib.apidoc",
 ]
 highlight_language = "default"
@@ -54,7 +48,9 @@ needs_extensions = {}
 needs_sphinx = "4.2"
 nitpicky = False
 primary_domain = "py"
-pygments_style = "one_dark"
+pygments_style = "material"  # syntax highlighting style
+rst_epilog = ""  # appended to the end of each rendered file
+rst_prolog = ""  # appended to the end of each rendered file
 source_suffix = {
     ".rst": "restructuredtext",
     ".txt": "restructuredtext",
@@ -66,14 +62,12 @@ templates_path = ["_templates"]
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 html_codeblock_linenos_style = "inline"
-html_css_files = ["css/rtd_dark.css"]
+html_css_files = ["css/custom.css"]
 html_favicon = None
 html_js_files = ["js/custom.js"]
 html_logo = None
-html_theme = "sphinx_rtd_theme"  # theme to use for HTML and HTML Help pages
-html_theme_options = {
-    "navigation_depth": -1,  # unlimited depth
-}
+html_theme = "furo"  # theme to use for HTML and HTML Help pages
+html_theme_options = {}
 html_short_title = f"{project} v{release}"
 html_title = f"{project} v{release}"
 html_show_copyright = True

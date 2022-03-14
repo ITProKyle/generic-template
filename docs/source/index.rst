@@ -8,6 +8,7 @@ Generic project template to go from zero to developing in seconds.
 .. toctree::
   :maxdepth: 2
   :caption: Documentation
+  :hidden:
 
   example_page
 

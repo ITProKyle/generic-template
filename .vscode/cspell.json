@@ -52,6 +52,7 @@
         "fgrep",
         "frontmatter",
         "fstring",
+        "furo",
         "howto",
         "kwarg",
         "labelmaker",
