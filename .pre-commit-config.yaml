@@ -32,7 +32,7 @@ repos:
           )$
       - id: trailing-whitespace
   - repo: https://github.com/ITProKyle/pre-commit-hook-yamlfmt
-    rev: 0.2.0
+    rev: v0.2.0
     hooks:
       - id: yamlfmt
         args: [--mapping, '2', --offset, '2', --sequence, '4']
