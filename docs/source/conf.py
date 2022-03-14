@@ -88,8 +88,8 @@ os.environ["SPHINX_APIDOC_OPTIONS"] = "members"
 
 # -- Options of sphinx.ext.autodoc -------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html#configuration
-autoclass_content = "class"  # TODO add to runway
-autodoc_class_signature = "separated"  # TODO add to runway
+autoclass_content = "class"
+autodoc_class_signature = "separated"
 autodoc_default_options = {
     "inherited-members": True,  # show all inherited members
     "member-order": "bysource",

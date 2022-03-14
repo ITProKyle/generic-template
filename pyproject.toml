@@ -90,7 +90,6 @@ profile = "black"
 skip = [
   ".eggs",
   ".git",
-  ".runway",
   ".serverless",
   ".venv",
   "_build",
@@ -175,7 +174,6 @@ exclude = [
   "**/__pycache__",
   "**/.eggs",
   "**/.git",
-  "**/.runway",
   "**/.venv",
   "**/docs",
   "**/node_modules",
