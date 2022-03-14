@@ -34,7 +34,7 @@ repos:
   - repo: https://github.com/jumanjihouse/pre-commit-hook-yamlfmt
     rev: 0.1.0
     hooks:
-      - id: yamlfile
+      - id: yamlfmt
         args: [--implicit_start, --mapping, '2', --offset, '2', --sequence, '4']
         files: |
           (?x)^(
