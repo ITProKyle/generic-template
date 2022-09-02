@@ -19,7 +19,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Run Label Maker
-        uses: crazy-max/ghaction-github-labeler@v3  # cspell:ignore ghaction
+        uses: crazy-max/ghaction-github-labeler@v4  # cspell:ignore ghaction
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           yaml-file: .github/labels.yml
