@@ -35,7 +35,7 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - run: poetry install -vv
-      - uses: pre-commit/action@v2.0.3
+      - uses: pre-commit/action@v3.0.0
   spell-check:
     # There is an official action published by cSpell.
     # v1.1.1 was tested but did not function as desired so we are using the CLI.
