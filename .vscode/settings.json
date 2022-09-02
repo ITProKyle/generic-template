@@ -17,7 +17,7 @@
     "editor.tabSize": 2,
     "esbonio.server.enabled": false,
     "esbonio.sphinx.buildDir": "${workspaceFolder}/docs/build",
-    "esbonio.sphinx.confDir": "/Users/e153067/repos/github/ITProKyle/generic-template/docs/source",
+    "esbonio.sphinx.confDir": "${workspaceFolder}/docs/source",
     "files.insertFinalNewline": true,
     "python.defaultInterpreterPath": ".venv/bin/python",
     "python.formatting.provider": "black",
