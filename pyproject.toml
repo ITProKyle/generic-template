@@ -18,6 +18,7 @@ sphinx = "^7.2.6"
 sphinx-copybutton = "^0.5.2"
 sphinx-design = "^0.5.0"
 sphinxcontrib-apidoc = "^0.5.0"
+sphinxcontrib-jquery = "^4.1"
 
 [tool.poetry.group.lint.dependencies]
 black = "^24.4.0"
@@ -63,6 +64,16 @@ show_missing = true
 omit = [
   "*/type_defs.py",  # assuming this would not contain any logic
 ]
+
+[tool.poetry-dynamic-versioning]
+# Docs: https://github.com/mtkennerly/poetry-dynamic-versioning
+# Install: poetry self add "poetry-dynamic-versioning[plugin]@latest"
+bump = true
+enable = true
+fix-shallow-repository = true
+metadata = false
+strict = true
+style = "pep440"
 
 [tool.pyright]
 exclude = [
@@ -162,5 +173,5 @@ overrides."tool.poetry".first = ["name", "version"]
 overrides."tool.poetry.dependencies".first = ["python"]
 
 [build-system]
-build-backend = "poetry.core.masonry.api"
-requires = ["poetry-core>=1.0.7"]
+build-backend = "poetry_dynamic_versioning.backend"
+requires = ["poetry-core>=1.0.7", "poetry-dynamic-versioning>=1.2.0,<2.0.0"]
