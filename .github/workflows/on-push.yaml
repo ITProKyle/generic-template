@@ -22,8 +22,8 @@ jobs:
       matrix:
         python-version: [3.9, '3.10', '3.11']
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
       - run: npm ci
@@ -36,8 +36,8 @@ jobs:
     # v1.1.1 was tested but did not function as desired so we are using the CLI.
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
       - run: npm ci
@@ -50,7 +50,7 @@ jobs:
       matrix:
         python-version: [3.9, '3.10', '3.11']
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: ITProKyle/action-setup-python@v0.7.0
         with:
           python-version: ${{ matrix.python-version }}

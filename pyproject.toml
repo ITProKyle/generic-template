@@ -8,41 +8,25 @@ license = "Apache-2.0"
 [tool.poetry.dependencies]
 python = "^3.9"
 
-furo = { version = ">=2022.1.2", optional = true }  # docs
-recommonmark = { version = ">=0.7.1", optional = true }  # docs
-sphinx = { version = ">=4.4.0", optional = true }  # docs
-sphinx-copybutton = { version = ">=0.4.0", optional = true }  # docs
-sphinx-design = { version = ">=0.0.13", optional = true }  # docs
-sphinxcontrib-apidoc = { version = ">=0.3", optional = true }  # docs
-
 [tool.poetry.group.dev.dependencies]
-black = ">=22.1.0"
-coverage = ">=6.3.2"
-flake8 = ">=4.0.1"
-flake8-bugbear = ">=22.1.11"  # flake8 plugin
-flake8-comprehensions = ">=3.8.0"  # flake8 plugin
-flake8-docstrings = ">=1.6.0"  # flake8 plugin
-flake8-print = ">=4.0.0"  # flake8 plugin
-flake8-use-fstring = ">=1.3"  # flake8 plugin
-isort = ">=5.10.1"
-mock = ">=4.0.3"
-pep8-naming = ">=0.12.1"  # flake8 plugin
 pre-commit = "^3.7.0"
-pydocstyle = ">=6.1.1"
-pylint = ">=2.12.2"
-pytest = ">=7.0.1"
+
+[tool.poetry.group.docs.dependencies]
+furo = "^2024.1.29"
+recommonmark = "^0.7.1"
+sphinx = "^7.2.6"
+sphinx-copybutton = "^0.5.2"
+sphinx-design = "^0.5.0"
+sphinxcontrib-apidoc = "^0.5.0"
+
+[tool.poetry.group.lint.dependencies]
+black = "^24.4.0"
+
+[tool.poetry.group.test.dependencies]
+coverage = "^7.4.4"
+pytest = "^8.1.1"
 pytest-cov = ">=3.0.0"
 pytest-mock = ">=3.7.0"
-
-[tool.poetry.extras]
-docs = [
-  "furo",
-  "recommonmark",
-  "sphinx",
-  "sphinx-copybutton",
-  "sphinx-design",
-  "sphinxcontrib-apidoc",
-]
 
 [build-system]
 requires = ["poetry-core>=1.0.7"]
@@ -87,100 +71,6 @@ omit = [
 ]
 
 
-[tool.isort]
-profile = "black"
-skip = [
-  ".eggs",
-  ".git",
-  ".venv",
-  "_build",
-  "build",
-  "dist",
-  "node_modules",
-]
-
-
-[tool.pylint.basic]
-# http://pylint.pycqa.org/page/technical_reference/features.html#basic-checker
-good-names = [
-  "_",
-  "f",
-  "fn",
-  "i",
-  "id",
-  "j",
-  "k",
-  "os",
-  "v",
-]
-
-[tool.pylint.classes]
-# http://pylint.pycqa.org/page/technical_reference/features.html#classes-checker
-defining-attr-methods = ["__init__", "__new__"]
-exclude-protected = [
-  "_session",  # for boto3.session.Session
-  "_client_config",  # boto3.client.Client._client_config contains info like region
-  "_endpoint",  # boto3.client.Client._endpoint contains s3 endpoint info
-]
-
-[tool.pylint.design]
-# http://pylint.pycqa.org/page/technical_reference/features.html#design-checker-options
-max-args = 50
-max-attributes = 50
-max-bool-expr = 5
-max-branches = 20
-max-locals = 25
-max-parents = 10
-max-public-methods = 30
-max-returns = 6
-max-statements = 50
-min-public-methods = 0
-
-[tool.pylint.format]
-# http://pylint.pycqa.org/page/technical_reference/features.html#format-checker
-max-line-length = 100
-max-module-lines = 1000
-
-[tool.pylint.imports]
-# http://pylint.pycqa.org/page/technical_reference/features.html#imports-checker
-allow-wildcard-with-all = "no"
-
-[tool.pylint.logging]
-# http://pylint.pycqa.org/page/technical_reference/features.html#logging-checker
-logging-format-style = "old"
-
-[tool.pylint.master]
-# http://pylint.pycqa.org/page/technical_reference/features.html#general-options
-ignore-patterns = [".+py[ci]$"]
-jobs = 0
-
-[tool.pylint.message_control]
-# http://pylint.pycqa.org/page/technical_reference/features.html#messages-control-options
-disable = [
-  "line-too-long",  # flake8 overlap
-  "missing-class-docstring",  # flake8 (pydocstyle) overlap
-  "missing-function-docstring",  # flake8 (pydocstyle) overlap
-  "missing-module-docstring",  # flake8 (pydocstyle) overlap
-  "similarities",  # black overcomplicated this
-  "ungrouped-imports", # false positive when using TYPE_CHECKING; isort should cover this
-  "unused-import",  # flake8 overlap (F401)
-]
-
-[tool.pylint.miscellaneous]
-# http://pylint.pycqa.org/page/technical_reference/features.html#miscellaneous-checker
-notes = ["FIXME"]
-
-[tool.pylint.reports]
-# https://pylint.pycqa.org/page/technical_reference/features.html#reports-options
-msg-template = "{path}:{line}:{column}: {msg_id}: {msg} ({symbol})"
-output-format = "colorized"
-score = "yes"
-
-[tool.pylint.typecheck]
-# http://pylint.pycqa.org/page/technical_reference/features.html#typecheck-checker
-ignored-modules = ["_typeshed", "distutils"]
-
-
 [tool.pyright]
 exclude = [
   "**/__pycache__",
@@ -191,7 +81,7 @@ exclude = [
   "**/node_modules",
   "**/typings",
 ]
-pythonVersion = "3.8"
+pythonVersion = "3.9"
 reportDuplicateImport = "none"
 reportImportCycles = "none"
 reportIncompatibleMethodOverride = "warning"
