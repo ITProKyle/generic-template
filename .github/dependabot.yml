@@ -9,7 +9,7 @@ updates:
     #   - ITProKyle
     schedule:
       interval: daily
-      time: "08:00"
+      time: 08:00
       timezone: America/New_York
   - directory: /
     open-pull-requests-limit: 5
@@ -19,7 +19,7 @@ updates:
     schedule:
       day: monday
       interval: weekly
-      time: "08:00"
+      time: 08:00
       timezone: America/New_York
   - directory: /
     # ignore:
@@ -36,7 +36,7 @@ updates:
     schedule:
       day: monday
       interval: weekly
-      time: "08:00"
+      time: 08:00
       timezone: America/New_York
     # versioning-strategy can be used for projects that need more control
     # over when version constraints are changed.
