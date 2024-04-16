@@ -20,8 +20,8 @@ repos:
       - id: file-contents-sorter
         files: |
           (?x)^(
-            \.gitignore|
-            \.vscode/dictionaries/.*\.txt
+            \.dockerignore|
+            \.gitignore
           )$
       - id: pretty-format-json
         args: [--autofix, --indent, '4']
