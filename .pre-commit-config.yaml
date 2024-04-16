@@ -18,13 +18,13 @@ repos:
         args: [--autofix, --indent, '4']
         exclude: |
           (?x)^(
-            (.*)?(cdk|package|tsconfig|tslint).json
+            (.*)?(cdk|package|tsconfig|tslint)\.json
           )$
       - id: pretty-format-json
         args: [--autofix, --indent, '2']
         files: |
           (?x)^(
-            (.*)?(cdk|package|tsconfig|tslint).json
+            (.*)?(cdk|package|tsconfig|tslint)\.json
           )$
       - id: trailing-whitespace
       - id: mixed-line-ending
@@ -34,6 +34,10 @@ repos:
     hooks:
       - id: yamlfmt
         args: [--mapping, '2', --offset, '2', --sequence, '4']
+        exclude: |
+          (?x)^(
+            (.*)\.github/dependabot\.yml
+          )$
   - repo: https://github.com/executablebooks/mdformat
     rev: 0.7.17
     hooks:
