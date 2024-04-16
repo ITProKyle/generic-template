@@ -19,10 +19,10 @@ sphinxcontrib-apidoc = { version = ">=0.3", optional = true }  # docs
 pre-commit = "^3.7.0"
 
 [tool.poetry.group.lint.dependencies]
-black = ">=22.1.0"
+black = "^24.4.0"
 
 [tool.poetry.group.test.dependencies]
-coverage = ">=6.3.2"
+coverage = "^7.4.4"
 pytest = ">=7.0.1"
 pytest-cov = ">=3.0.0"
 pytest-mock = ">=3.7.0"
