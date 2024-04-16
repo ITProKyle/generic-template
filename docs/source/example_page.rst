@@ -17,7 +17,7 @@ Plain text with some ``inline code``.
     print('client.describe_instances')
     print('test\ntest')
 
-    def function(**kwarg):
+    def function(**kwargs):
         """placeholder."""
 
     class Test:

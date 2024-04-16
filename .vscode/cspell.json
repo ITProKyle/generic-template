@@ -1,88 +1,12 @@
 {
-    "dictionaries": [
-        "bash",
-        "python",
-        "softwareTerms",
-        "sphinx"
-    ],
-    "dictionaryDefinitions": [
-        {
-            "name": "sphinx",
-            "path": "./dictionaries/sphinx.txt"
-        }
-    ],
+    "allowCompoundWords": true,
     "ignorePaths": [
-        "**/*.css",
-        "**/*.egg-info/**",
-        "**/*.js",
-        "**/*.pyc",
-        "**/*.ts",
-        "**/.git",
-        "**/.github/labels.yml",
-        "**/.gitignore",
-        "**/.venv/**",
-        "**/.vscode/extensions.json",
-        "**/.vscode/settings.json",
-        "**/Pipfile.lock",
-        "**/__pycache__/**",
-        "**/build/**",
-        "**/dist/**",
-        "**/node_modules/**",
-        "**/package-lock.json",
-        "**/package.json",
-        "**/poetry.lock",
-        "**/requirements.txt",
-        "**/tsconfig.json",
-        ".vscode/dictionaries/*.txt",
-        "typings/**"
+        "**/.github/labels.yml"
     ],
-    "language": "en",
-    "languageSettings": [
-        {
-            "allowCompoundWords": true,
-            "dictionaries": [
-                "python"
-            ],
-            "languageId": "toml"
-        }
+    "import": [
+        "@itprokyle/cspell-dict/cspell-ext.json"
     ],
     "maxNumberOfProblems": 100,
     "version": "0.2",
-    "words": [
-        "autofix",
-        "boto",
-        "botocore",
-        "direnv",
-        "docstrings",
-        "favicon",
-        "fgrep",
-        "frontmatter",
-        "fstring",
-        "furo",
-        "howto",
-        "kwarg",
-        "labelmaker",
-        "maint",
-        "markdownlint",
-        "mdformat",
-        "noqa",
-        "overlining",
-        "printf",
-        "pydoc",
-        "pyenv",
-        "pygment",
-        "pyright",
-        "recommonmark",
-        "repos",
-        "subclassing",
-        "tomlsort",
-        "ungrouped",
-        "venv",
-        "venvpath",
-        "virtualenvs",
-        "winget",
-        "wontfix",
-        "xargs",
-        "yamlfmt"
-    ]
+    "words": []
 }
