@@ -5,21 +5,28 @@ https://www.sphinx-doc.org/en/master/usage/configuration.html
 """
 
 import os
+import re
+import tomllib
 from datetime import date
 from pathlib import Path
 
+from pkg_resources import get_distribution
+
 DOCS_DIR = Path(__file__).parent.parent.resolve()
 ROOT_DIR = DOCS_DIR.parent
-SRC_DIR = DOCS_DIR / "source"
+DOC_SRC = DOCS_DIR / "source"
+
+PYPROJECT_TOML = tomllib.loads((ROOT_DIR / "pyproject.toml").read_text())
+"""Read in the contents of ``../../pyproject.toml`` to reuse it's values."""
 
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
-project = "generic-template"
+project = PYPROJECT_TOML["tool"]["poetry"]["name"]
 copyright = f"{date.today().year}, Kyle Finley"  # noqa: A001, DTZ011
-author = "Kyle Finley"
-release = "0.0.0"
-version = release
+author = PYPROJECT_TOML["tool"]["poetry"]["authors"][0]
+version = get_distribution(project).version
+release = ".".join(version.split(".")[:2])  # short X.Y version
 
 
 # -- General configuration ---------------------------------------------------
@@ -32,15 +39,17 @@ extensions = [
     "recommonmark",
     "sphinx.ext.autodoc",
     "sphinx.ext.autosectionlabel",
+    "sphinx.ext.intersphinx",
     "sphinx.ext.napoleon",
     "sphinx.ext.viewcode",
     "sphinx_copybutton",
     "sphinx_design",
     "sphinxcontrib.apidoc",
+    "sphinxcontrib.jquery",
 ]
 highlight_language = "default"
 intersphinx_mapping = {}
-language = None
+language = "en"
 master_doc = "index"
 needs_extensions = {}
 needs_sphinx = "4.2"
@@ -64,13 +73,20 @@ html_css_files = ["css/custom.css"]
 html_favicon = None
 html_js_files = ["js/custom.js"]
 html_logo = None
-html_theme = "furo"  # theme to use for HTML and HTML Help pages
-html_theme_options = {}
 html_short_title = f"{project} v{release}"
-html_title = f"{project} v{release}"
 html_show_copyright = True
-html_show_sphinx = True
+html_show_sphinx = False
 html_static_path = ["_static"]  # dir with static files relative to this dir
+html_theme = "furo"  # theme to use for HTML and HTML Help pages
+html_theme_options = {
+    "dark_css_variables": {
+        "font-stack--monospace": "Inconsolata, monospace",
+    },
+    "light_css_variables": {
+        "font-stack--monospace": "Inconsolata, monospace",
+    },
+}
+html_title = f"{project} v{release}"
 
 
 # -- Options for sphinx-apidoc -----------------------------------------------
@@ -115,9 +131,24 @@ apidoc_excluded_paths = [
     "test*",
     "typings",
 ]
-apidoc_extra_args = [f"--templatedir={SRC_DIR / '_templates/apidocs'}"]
-apidoc_module_dir = "../../"
+apidoc_extra_args = [f"--templatedir={DOC_SRC / '_templates' / 'apidocs'}"]
+apidoc_module_dir = "../../" + re.sub(r"(\.|-)", "_", project)
 apidoc_module_first = True
 apidoc_output_dir = "apidocs"
 apidoc_separate_modules = True
 apidoc_toc_file = "index"
+
+
+# -- Options of sphinx.ext.intersphinx ------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html
+intersphinx_mapping = {
+    "python": ("https://docs.python.org/3", None),  # link to python docs
+}
+
+
+# -- Options for sphinx_copybutton ---------------------------------
+# https://sphinx-copybutton.readthedocs.io/en/latest/index.html
+copybutton_prompt_text = r">>> |\.\.\. |\$ |In \[\d*\]: | {2,5}\.\.\.: | {5,8}: "
+copybutton_prompt_is_regexp = True
+copybutton_remove_prompts = True
+copybutton_line_continuation_character = "\\"
