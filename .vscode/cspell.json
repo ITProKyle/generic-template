@@ -75,6 +75,7 @@
         "recommonmark",
         "repos",
         "subclassing",
+        "tomlsort",
         "ungrouped",
         "venv",
         "venvpath",
