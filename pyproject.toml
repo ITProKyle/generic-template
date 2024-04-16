@@ -6,7 +6,7 @@ description = "Generic Python project template."
 license = "Apache-2.0"
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.11"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.7.0"
@@ -21,6 +21,7 @@ sphinxcontrib-apidoc = "^0.5.0"
 
 [tool.poetry.group.lint.dependencies]
 black = "^24.4.0"
+ruff = "^0.3.7"
 
 [tool.poetry.group.test.dependencies]
 coverage = "^7.4.4"
@@ -43,13 +44,12 @@ force-exclude = '''
 '''
 include = '\.pyi?$'
 line-length = 88
-target-version = ["py38", "py39"]
+target-version = ["py311", "py312"]
 
 [tool.coverage.report]
 exclude_lines = [
   "@overload",
   "cov: ignore",  # standard exclude comment
-  "from pathlib import Path",
   "if TYPE_CHECKING:",  # excluded blocks
   "if __name__ == .__main__.:",
   "raise AssertionError",  # defensive exceptions
@@ -74,7 +74,7 @@ exclude = [
   "**/node_modules",
   "**/typings",
 ]
-pythonVersion = "3.9"
+pythonVersion = "3.11"
 reportDuplicateImport = "none"
 reportImportCycles = "none"
 reportIncompatibleMethodOverride = "warning"
