@@ -46,9 +46,7 @@ setup-npm: ## install node dependencies with npm
 
 setup-poetry: ## setup python virtual environment
 	@poetry check
-	@poetry install $(POETRY_OPTS) \
-		--extras docs \
-		--sync
+	@poetry install $(POETRY_OPTS) --sync
 
 setup-pre-commit: ## install pre-commit git hooks
 	@poetry run pre-commit install
