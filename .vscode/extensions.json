@@ -1,12 +1,14 @@
 {
     "recommendations": [
         "DavidAnson.vscode-markdownlint",
-        "bungcip.better-toml",
+        "charliermarsh.ruff",
         "editorconfig.editorconfig",
+        "ms-python.black-formatter",
         "ms-python.python",
         "ms-python.vscode-pylance",
         "njpwerner.autodocstring",
         "redhat.vscode-yaml",
-        "streetsidesoftware.code-spell-checker"
+        "streetsidesoftware.code-spell-checker",
+        "tamasfe.even-better-toml"
     ]
 }

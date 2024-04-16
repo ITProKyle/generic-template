@@ -13,13 +13,18 @@ docs: ## delete current HTML docs & build fresh HTML docs
 docs-changes: ## build HTML docs; only builds changes detected by Sphinx
 	@$(MAKE) --no-print-directory -C docs html
 
+fix: fix-ruff fix-black run-pre-commit ## run all automatic fixes
+
 fix-black: ## automatically fix all black errors
 	@poetry run black .
 
 fix-md: ## automatically fix markdown format errors
 	@poetry run pre-commit run mdformat --all-files
 
-lint: lint-black lint-pyright ## run linters
+fix-ruff: ## automatically fix everything ruff can fix (implies fix-imports)
+	@poetry run ruff check . --fix-only
+
+lint: lint-black lint-ruff lint-pyright ## run all linters
 
 lint-black: ## run black
 	@echo "Running black... If this fails, run 'make fix-black' to resolve."
@@ -29,6 +34,11 @@ lint-black: ## run black
 lint-pyright: ## run pyright
 	@echo "Running pyright..."
 	@npm exec --no -- pyright --venvpath ./
+	@echo ""
+
+lint-ruff: ## run ruff
+	@echo "Running ruff... If this fails, run 'make fix-ruff' to resolve some error automatically, other require manual action."
+	@poetry run ruff check .
 	@echo ""
 
 open-docs: ## open docs (HTML files must already exists)
