@@ -8,15 +8,16 @@ license = "Apache-2.0"
 [tool.poetry.dependencies]
 python = "^3.9"
 
-furo = { version = ">=2022.1.2", optional = true }  # docs
-recommonmark = { version = ">=0.7.1", optional = true }  # docs
-sphinx = { version = ">=4.4.0", optional = true }  # docs
-sphinx-copybutton = { version = ">=0.4.0", optional = true }  # docs
-sphinx-design = { version = ">=0.0.13", optional = true }  # docs
-sphinxcontrib-apidoc = { version = ">=0.3", optional = true }  # docs
-
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.7.0"
+
+[tool.poetry.group.docs.dependencies]
+furo = "^2024.1.29"
+recommonmark = "^0.7.1"
+sphinx = "^7.2.6"
+sphinx-copybutton = "^0.5.2"
+sphinx-design = "^0.5.0"
+sphinxcontrib-apidoc = "^0.5.0"
 
 [tool.poetry.group.lint.dependencies]
 black = "^24.4.0"
@@ -26,16 +27,6 @@ coverage = "^7.4.4"
 pytest = "^8.1.1"
 pytest-cov = ">=3.0.0"
 pytest-mock = ">=3.7.0"
-
-[tool.poetry.extras]
-docs = [
-  "furo",
-  "recommonmark",
-  "sphinx",
-  "sphinx-copybutton",
-  "sphinx-design",
-  "sphinxcontrib-apidoc",
-]
 
 [build-system]
 requires = ["poetry-core>=1.0.7"]
