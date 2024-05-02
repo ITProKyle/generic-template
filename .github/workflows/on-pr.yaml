@@ -14,5 +14,5 @@ jobs:
       - uses: deepakputhraya/action-branch-name@v1.0.0
         with:
           regex: ([a-z])+\/([a-zA-Z0-9\-\_])+
-          allowed_prefixes: bugfix,chore,dependabot,docs,feat,feature,fix,hotfix,maint,maintain,maintenance,release
+          allowed_prefixes: bugfix,chore,dependabot,docs,feat,feature,fix,hotfix,maint,maintain,maintenance,release,renovate
           ignore: master,release,develop

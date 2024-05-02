@@ -4,14 +4,8 @@ autolabeler:  # cspell:ignore autolabeler
     branch: [/^(bug|bugfix|fix|hotfix)\/.*/]
   - label: changelog:skip
     branch: [/^(dependabot)\/.*/]
-  - label: cloudformation
-    files:
-      - '**/templates/*.json'
-      - '**/templates/*.template'
-      - '**/templates/*.yaml'
-      - '**/templates/*.yml'
   - label: dependencies
-    branch: [/^(depend|dependabot)\/.*/]
+    branch: [/^(depend|dependabot|renovate)\/.*/]
   - label: documentation
     branch: [/^(docs)\/.*/]
   - label: feature
