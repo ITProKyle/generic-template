@@ -31,7 +31,7 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - run: make lint
-  spell-check:
+  spellcheck:
     # There is an official action published by cSpell.
     # v1.1.1 was tested but did not function as desired so we are using the CLI.
     runs-on: ubuntu-latest

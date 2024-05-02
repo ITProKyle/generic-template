@@ -8,12 +8,11 @@ indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[*.{json,py}]
+[{*.{json,py},Makefile}]
 indent_size = 4
 
 [Makefile]
-indent_size = 4
 indent_style = tab
 
-[{package,package-lock}.json]
+[{cdk,package,package-lock,tsconfig,tslint}.json]
 indent_size = 2

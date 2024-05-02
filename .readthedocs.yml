@@ -12,6 +12,7 @@ build:
       # https://python-poetry.org/docs/#installing-manually
       - pip install poetry
       - poetry self add "poetry-dynamic-versioning[plugin]"
+      - poetry dynamic-versioning
     post_install:
       # Install dependencies with 'docs' dependency group
       # https://python-poetry.org/docs/managing-dependencies/#dependency-groups
