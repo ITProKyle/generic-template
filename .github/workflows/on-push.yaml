@@ -27,7 +27,7 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
       - run: npm ci
-      - uses: ITProKyle/action-setup-python@v0.7.0
+      - uses: ITProKyle/action-setup-python@v1.0.0
         with:
           python-version: ${{ matrix.python-version }}
       - run: make lint
@@ -51,7 +51,7 @@ jobs:
         python-version: ['3.11', '3.12']
     steps:
       - uses: actions/checkout@v4
-      - uses: ITProKyle/action-setup-python@v0.7.0
+      - uses: ITProKyle/action-setup-python@v1.0.0
         with:
           python-version: ${{ matrix.python-version }}
       - run: make test
