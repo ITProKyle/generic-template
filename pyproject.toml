@@ -12,7 +12,7 @@ python = "^3.11"
 pre-commit = "^3.8.0"
 
 [tool.poetry.group.docs.dependencies]
-furo = "^2024.7.18"
+furo = "^2024.8.6"
 recommonmark = "^0.7.1"
 sphinx = "^7.4.7"
 sphinx-copybutton = "^0.5.2"
