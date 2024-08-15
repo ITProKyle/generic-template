@@ -22,7 +22,7 @@ sphinxcontrib-jquery = "^4.1"
 
 [tool.poetry.group.lint.dependencies]
 black = "^24.8.0"
-ruff = "^0.5.7"
+ruff = "^0.6.0"
 
 [tool.poetry.group.test.dependencies]
 coverage = "^7.6.1"
