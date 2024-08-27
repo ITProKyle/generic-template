@@ -1,7 +1,7 @@
 {
   "description": "Version management for npm tools.",
   "devDependencies": {
-    "@itprokyle/cspell-dict": "^1.2.5",
+    "@itprokyle/cspell-dict": "^1.2.6",
     "cspell": "^8.14.2",
     "pyright": "^1.1.377"
   },
