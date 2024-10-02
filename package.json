@@ -3,7 +3,7 @@
   "devDependencies": {
     "@itprokyle/cspell-dict": "^1.2.7",
     "cspell": "^8.14.4",
-    "pyright": "^1.1.382"
+    "pyright": "^1.1.383"
   },
   "name": "generic-template",
   "version": "0.0.0"
