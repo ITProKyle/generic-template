@@ -39,7 +39,7 @@ repos:
       - id: mixed-line-ending
         args: [--fix=lf]
   - repo: https://github.com/pappasam/toml-sort
-    rev: v0.23.1
+    rev: v0.24.1
     hooks:
       - id: toml-sort-fix
   - repo: https://github.com/ITProKyle/pre-commit-hook-yamlfmt
@@ -52,7 +52,7 @@ repos:
             (.*)\.github/dependabot\.yml
           )$
   - repo: https://github.com/executablebooks/mdformat
-    rev: 0.7.17
+    rev: 0.7.19
     hooks:
       - id: mdformat
         additional_dependencies:
