@@ -1,12 +1,15 @@
-[tool.poetry]
+[project]
 name = "generic-template"
-version = "0.0.0"
-authors = ["Kyle Finley <kyle@finley.sh>"]
+authors = [
+  {email = "kyle@finley.sh", name = "Kyle Finley"},
+]
 description = "Generic Python project template."
-license = "Apache-2.0"
+dynamic = ["version"]
+license = {text = "Apache-2.0"}
+requires-python = ">=3.11, <4"
 
-[tool.poetry.dependencies]
-python = "^3.11"
+[tool.poetry]
+version = "0.0.0"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^4.0.1"
@@ -166,12 +169,12 @@ allow-magic-value-types = ["bytes", "int", "str"]
 [tool.tomlsort]
 all = true
 in_place = true
-sort_first = ["tool", "tool.poetry"]
+sort_first = ["project", "tool", "tool.poetry"]
 spaces_before_inline_comment = 2
 trailing_comma_inline_array = true
-overrides."tool.poetry".first = ["name", "version"]
-overrides."tool.poetry.dependencies".first = ["python"]
+overrides.project.first = ["name", "version"]
+overrides."tool.poetry".first = ["version"]
 
 [build-system]
 build-backend = "poetry_dynamic_versioning.backend"
-requires = ["poetry-core>=1.0.7", "poetry-dynamic-versioning>=1.2.0,<2.0.0"]
+requires = ["poetry-core", "poetry-dynamic-versioning>=1.2.0,<2.0.0"]
