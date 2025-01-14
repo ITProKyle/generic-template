@@ -10,7 +10,7 @@ import tomllib
 from datetime import date
 from pathlib import Path
 
-from pkg_resources import get_distribution
+from generic_template import __version__
 
 DOCS_DIR = Path(__file__).parent.parent.resolve()
 ROOT_DIR = DOCS_DIR.parent
@@ -22,10 +22,10 @@ PYPROJECT_TOML = tomllib.loads((ROOT_DIR / "pyproject.toml").read_text())
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
-project = PYPROJECT_TOML["tool"]["poetry"]["name"]
+project = PYPROJECT_TOML["project"]["name"]
 copyright = f"{date.today().year}, Kyle Finley"  # noqa: A001, DTZ011
-author = PYPROJECT_TOML["tool"]["poetry"]["authors"][0]
-version = get_distribution(project).version
+author = PYPROJECT_TOML["project"]["authors"][0]["name"]
+version = __version__
 release = ".".join(version.split(".")[:2])  # short X.Y version
 
 
@@ -78,13 +78,14 @@ html_show_copyright = True
 html_show_sphinx = False
 html_static_path = ["_static"]  # dir with static files relative to this dir
 html_theme = "furo"  # theme to use for HTML and HTML Help pages
-html_theme_options = {
+html_theme_options: dict[str, bool | dict[str, str] | list[str] | str] = {
     "dark_css_variables": {
         "font-stack--monospace": "Inconsolata, monospace",
     },
     "light_css_variables": {
         "font-stack--monospace": "Inconsolata, monospace",
     },
+    "top_of_page_buttons": [],
 }
 html_title = f"{project} v{release}"
 
