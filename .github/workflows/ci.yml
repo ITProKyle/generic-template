@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  python-checks:
+    strategy:
+      matrix:
+        python-version: ['3.11', '3.12', '3.13']
+    uses: finleyfamily/workflows/.github/workflows/python.checks.yml@master
+    with:
+      disable-tests: true  # NOTE (kyle): remove to enable tests
+      python-version: ${{ matrix.python-version }}
+  python-build:
+    needs:
+      - python-checks
+    uses: finleyfamily/workflows/.github/workflows/python.build.yml@master
+  spellcheck:
+    uses: finleyfamily/workflows/.github/workflows/spellcheck.yml@master

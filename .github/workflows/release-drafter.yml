@@ -1,0 +1,12 @@
+name: Release Drafter
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  release-drafter:
+    permissions:
+      contents: write
+    uses: finleyfamily/workflows/.github/workflows/release-drafter.yml@master
