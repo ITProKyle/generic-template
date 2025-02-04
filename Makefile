@@ -6,6 +6,11 @@ ifeq ($(CI), yes)
 	PRE_COMMIT_OPTS = --show-diff-on-failure --verbose
 endif
 
+help: ## show this message
+	@awk \
+		'BEGIN {FS = ":.*##"; printf "\nUsage: make \033[36m<target>\033[0m\n"} /^[a-zA-Z_-]+:.*?##/ { printf "  \033[36m%-30s\033[0m %s\n", $$1, $$2 } /^##@/ { printf "\n\033[1m%s\033[0m\n", substr($$0, 5) }' \
+		$(MAKEFILE_LIST)
+
 .PHONY: docs
 docs: ## delete current HTML docs & build fresh HTML docs
 	@$(MAKE) --no-print-directory -C docs docs
@@ -13,23 +18,18 @@ docs: ## delete current HTML docs & build fresh HTML docs
 docs-changes: ## build HTML docs; only builds changes detected by Sphinx
 	@$(MAKE) --no-print-directory -C docs html
 
-fix: fix-ruff fix-black run-pre-commit ## run all automatic fixes
+fix: fix-ruff run-pre-commit ## run all automatic fixes
 
-fix-black: ## automatically fix all black errors
-	@poetry run black .
+fix-formatting: ## automatically fix ruff formatting issues
+	@poetry run ruff format .
 
 fix-md: ## automatically fix markdown format errors
 	@poetry run pre-commit run mdformat --all-files
 
-fix-ruff: ## automatically fix everything ruff can fix (implies fix-imports)
+fix-ruff: fix-formatting ## automatically fix everything ruff can fix (implies fix-imports)
 	@poetry run ruff check . --fix-only
 
-lint: lint-black lint-ruff lint-pyright ## run all linters
-
-lint-black: ## run black
-	@echo "Running black... If this fails, run 'make fix-black' to resolve."
-	@poetry run black . --check --color --diff
-	@echo ""
+lint: lint-ruff lint-pyright ## run all linters
 
 lint-pyright: ## run pyright
 	@echo "Running pyright..."
@@ -38,6 +38,7 @@ lint-pyright: ## run pyright
 
 lint-ruff: ## run ruff
 	@echo "Running ruff... If this fails, run 'make fix-ruff' to resolve some error automatically, other require manual action."
+	@poetry run ruff format . --diff
 	@poetry run ruff check .
 	@echo ""
 

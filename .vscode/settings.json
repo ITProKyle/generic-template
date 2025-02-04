@@ -4,7 +4,7 @@
             "source.fixAll.ruff": "explicit",
             "source.organizeImports": "always"
         },
-        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.defaultFormatter": "charliermarsh.ruff",
         "editor.detectIndentation": false,
         "editor.formatOnSave": true,
         "editor.insertSpaces": true,
@@ -15,13 +15,14 @@
         ],
         "editor.tabSize": 4
     },
+    "cSpell.enabled": true,
     "editor.rulers": [
         81,
         88,
         100
     ],
     "files.insertFinalNewline": true,
-    "python.defaultInterpreterPath": ".venv/bin/python",
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/",
     "restructuredtext.linter.disabledLinters": [
         "doc8",
         "rst-lint",

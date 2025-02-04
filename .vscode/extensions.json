@@ -3,7 +3,6 @@
         "DavidAnson.vscode-markdownlint",
         "charliermarsh.ruff",
         "editorconfig.editorconfig",
-        "ms-python.black-formatter",
         "ms-python.python",
         "ms-python.vscode-pylance",
         "redhat.vscode-yaml",
