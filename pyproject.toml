@@ -24,7 +24,6 @@ sphinxcontrib-apidoc = "^0.5.0"
 sphinxcontrib-jquery = "^4.1"
 
 [tool.poetry.group.lint.dependencies]
-black = "^24.10.0"
 ruff = "^0.9.4"
 
 [tool.poetry.group.test.dependencies]
@@ -35,23 +34,6 @@ pytest-mock = ">=3.14.0"
 
 [tool.poetry.requires-plugins]
 poetry-dynamic-versioning = {extras = ["plugin"], version = ">=1.6.0,<2.0.0"}
-
-[tool.black]
-force-exclude = '''
-/(
-    \.eggs
-  | \.git
-  | \.mypy_cache
-  | \.tox
-  | \.venv
-  | _build
-  | build
-  | dist
-)/
-'''
-include = '\.pyi?$'
-line-length = 100
-target-version = ["py311", "py312"]
 
 [tool.coverage.report]
 exclude_lines = [
@@ -127,9 +109,12 @@ testpaths = ["tests"]
 
 [tool.ruff]  # https://docs.astral.sh/ruff/settings/#top-level
 force-exclude = true
-line-length = 120
+line-length = 100
 show-fixes = true
 target-version = "py311"
+
+[tool.ruff.format]  # https://docs.astral.sh/ruff/settings/#format
+docstring-code-format = true
 
 [tool.ruff.lint]  # https://docs.astral.sh/ruff/settings/#lint
 ignore = [
@@ -146,7 +131,6 @@ ignore = [
   "TD003",  # Missing issue link on the line following this TODO
   "TID252",  # Relative imports from parent modules are banned
 ]
-ignore-init-module-imports = true
 select = ["ALL"]
 
 [tool.ruff.lint.extend-per-file-ignores]  # https://docs.astral.sh/ruff/settings/#lintextend-per-file-ignores
@@ -160,6 +144,9 @@ select = ["ALL"]
   "S108",  # Probable insecure usage of temporary file or directory
   "SLF001",  # Private member accessed - fine in tests
 ]
+
+[tool.ruff.lint.pycodestyle]  # https://docs.astral.sh/ruff/settings/#lint_pycodestyle_max-line-length
+max-line-length = 140
 
 [tool.ruff.lint.pydocstyle]  # https://docs.astral.sh/ruff/settings/#lintpydocstyle
 convention = "google"
