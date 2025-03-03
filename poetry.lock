@@ -839,14 +839,14 @@ files = [
 
 [[package]]
 name = "sphinx"
-version = "8.2.2"
+version = "8.2.3"
 description = "Python documentation generator"
 optional = false
 python-versions = ">=3.11"
 groups = ["docs"]
 files = [
-    {file = "sphinx-8.2.2-py3-none-any.whl", hash = "sha256:5207bcd13a7bd1083edd067671e308bca5cd0bda2bad614f79a24acbd0f51da5"},
-    {file = "sphinx-8.2.2.tar.gz", hash = "sha256:4579d91485326543df44307ba36ae6150a47fee070e89e99bec3654aac5607b8"},
+    {file = "sphinx-8.2.3-py3-none-any.whl", hash = "sha256:4405915165f13521d875a8c29c8970800a0141c14cc5416a38feca4ea5d9b9c3"},
+    {file = "sphinx-8.2.3.tar.gz", hash = "sha256:398ad29dee7f63a75888314e9424d40f52ce5a6a87ae88e7071e80af296ec348"},
 ]
 
 [package.dependencies]
@@ -1121,4 +1121,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.11, <4"
-content-hash = "3df1af67a7ee78ab3c1f117a43c4db5103a3702ae66c60d0befec16cc5ca06cb"
+content-hash = "aab0ff3f05dd214ba6b7d688255540aef0518480ccb777fefa9306e0eaa1f319"
