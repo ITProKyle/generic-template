@@ -6,7 +6,7 @@ authors = [
 description = "Generic Python project template."
 dynamic = ["version"]
 license = {text = "Apache-2.0"}
-requires-python = ">=3.11, <4"
+requires-python = ">=3.13.3, <4"
 
 [tool.poetry]
 version = "0.0.0"
