@@ -30,7 +30,7 @@ ruff = "^0.12.12"
 coverage = "^7.10.6"
 pytest = "^8.4.2"
 pytest-cov = ">=6.2.1"
-pytest-mock = ">=3.14.1"
+pytest-mock = ">=3.15.0"
 
 [tool.poetry.requires-plugins]
 poetry-dynamic-versioning = {extras = ["plugin"], version = ">=1.6.0,<2.0.0"}
