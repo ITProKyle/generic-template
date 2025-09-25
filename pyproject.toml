@@ -15,7 +15,7 @@ version = "0.0.0"
 pre-commit = "^4.3.0"
 
 [tool.poetry.group.docs.dependencies]
-furo = "^2025.7.19"
+furo = "^2025.9.25"
 recommonmark = "^0.7.1"
 sphinx = "^8.2.3"
 sphinx-copybutton = "^0.5.2"
