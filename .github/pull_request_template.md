@@ -6,35 +6,35 @@
 
 <!-- A short summary describing what was done... -->
 
-# Why This Is Needed
+## Why This Is Needed
 
 <!-- Explain why this change is needed. Can be omitted if covered in the summary. -->
 
-# What Changed
+## What Changed
 
 <!-- A detailed list of all the changes made, broken down by category. -->
 
-## Added
+### Added
 
 <!-- What was added? -->
 
-## Changed
+### Changed
 
 <!-- Did any functionality change? -->
 
-## Fixed
+### Fixed
 
 <!-- Were any bugs fixed? -->
 
-## Removed
+### Removed
 
 <!-- Was anything removed? -->
 
-# Screenshots
+## Screenshots
 
 <!-- Please include screenshots of any new features to show how it works. -->
 
-# Checklist
+## Checklist
 
 <!-- You can erase any parts of this template not applicable to your Pull Request. -->
 
