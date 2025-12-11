@@ -24,7 +24,7 @@ sphinxcontrib-apidoc = "^0.6.0"
 sphinxcontrib-jquery = "^4.1"
 
 [tool.poetry.group.lint.dependencies]
-ruff = "^0.14.8"
+ruff = "^0.14.9"
 
 [tool.poetry.group.test.dependencies]
 coverage = "^7.13.0"
