@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Run Label Maker
         uses: crazy-max/ghaction-github-labeler@v6  # cspell:ignore ghaction
         with:
