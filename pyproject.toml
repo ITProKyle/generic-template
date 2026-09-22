@@ -1,11 +1,11 @@
 [project]
 name = "generic-template"
 authors = [
-  {email = "kyle@finley.sh", name = "Kyle Finley"},
+  { email = "kyle@finley.sh", name = "Kyle Finley" },
 ]
 description = "Generic Python project template."
 dynamic = ["version"]
-license = {text = "Apache-2.0"}
+license = { text = "Apache-2.0" }
 requires-python = ">=3.11, <4"
 
 [tool.poetry]
@@ -33,7 +33,7 @@ pytest-cov = ">=7.1.0"
 pytest-mock = ">=3.15.1"
 
 [tool.poetry.requires-plugins]
-poetry-dynamic-versioning = {extras = ["plugin"], version = ">=1.6.0,<2.0.0"}
+poetry-dynamic-versioning = { extras = ["plugin"], version = ">=1.6.0,<2.0.0" }
 
 [tool.coverage.report]
 exclude_lines = [
@@ -157,10 +157,10 @@ allow-magic-value-types = ["bytes", "int", "str"]
 [tool.tomlsort]
 all = true
 in_place = true
+overrides.project.first = ["name", "version"]
 sort_first = ["project", "tool", "tool.poetry"]
 spaces_before_inline_comment = 2
 trailing_comma_inline_array = true
-overrides.project.first = ["name", "version"]
 
 [build-system]
 build-backend = "poetry_dynamic_versioning.backend"
